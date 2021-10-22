@@ -1,0 +1,8 @@
+@use './flex_custom' as *;
+
+.container{
+  @include start_center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}

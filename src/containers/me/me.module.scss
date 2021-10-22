@@ -1,0 +1,12 @@
+@use '../../flex_custom' as *;
+
+.cointainer{
+    @include center_start;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: black;
+    h4{
+        color: rgb(180, 180, 180)
+    }
+}
