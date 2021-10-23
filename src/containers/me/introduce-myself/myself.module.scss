@@ -1,8 +1,96 @@
 @use '../../../flex_custom.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Seaweed+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 .container{
     @include center_center;
+    flex-direction: row;
     width: 100%;
     height: 100vh;
-    color: red;
+    .column_info{
+        @include center_start;
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
+        h1{
+            font-size: 75px;
+            font-family: 'Permanent Marker';
+            color: rgb(255, 255, 255);
+            margin: 0px;
+            margin-top: 8%;
+            padding-bottom: 40px;
+        }
+        p{
+            width: 80%;
+            margin: 0px;
+            padding: 0px;
+            margin-left: 0%;
+            font-size: 15px;
+            color: rgb(255, 255, 255) !important;
+            font-family: 'Nunito';
+        }
+        .cont_buttons_social{
+            @include start_center;
+            width: 100%;
+            height: 8%;
+            margin-top: 5%;
+            .button_redirect:first-child{
+                margin-left: 0%;
+                border: 3px solid rgb(55, 142, 255);
+            }
+            .button_redirect:last-child{
+                border: 3px solid white;
+            }
+            .button_redirect{
+                @include center_center;
+                justify-content: space-evenly;
+                flex-direction: row;
+                width: 20%;
+                height: 50px;
+                margin-left: 5%;
+                border: 3px solid;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+                user-select: none;
+                cursor: pointer;
+                .icons_social{
+                    font-size: 24px;
+                }
+                p{
+                    width: auto;
+                    margin: 0px;
+                    padding: 0px;
+                }
+            }
+            .button_redirect:hover{
+                animation: scale_in 0.5s ease;
+                transform: translateY(-6px);
+            }
+            .button_redirect:not(:hover){
+                animation: scale_out 0.5s ease;
+                transform: translateY(0px);
+            }
+        }
+    }
+    .column_picture{
+        @include center_center;
+        width: 40%;
+        height: 100%;
+    }
+}
+@keyframes scale_in {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-6px);
+    }
+}
+@keyframes scale_out {
+    0%{
+        transform: translateY(-6px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
