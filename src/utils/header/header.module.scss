@@ -21,9 +21,14 @@
         @include center_center;
         width: 35%;
         justify-content: space-evenly;
-        .active{
-            border-bottom: 3px solid currentColor;
+        .active_white{
             color: rgb(255, 255, 255);
+            border-bottom: 3px solid currentColor;
+            animation: scale 0.1s ease;
+        }
+        .active_black{
+            color: rgb(0, 0, 0);
+            border-bottom: 3px solid black;
             animation: scale 0.1s ease;
         }
         p{

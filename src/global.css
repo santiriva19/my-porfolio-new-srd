@@ -1,3 +1,55 @@
+html {
+	scroll-behavior: smooth;
+}
+.scroll-container {
+  height: 100vh;
+  min-height: 450px;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.js-scroll.scrolled {
+  opacity: 1;
+}
+.scrolled.fade-in-right {
+  animation: slide_rigth 0.8s ease;
+}
+.scrolled.fade-in-left {
+  animation: slide_left 0.8s ease;
+}
+.scroll-element {
+    height: 100%;
+}
+
+.scroll-element,
+.scroll-caption {
+width: 100%;
+}
+@keyframes slide_rigth {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes slide_left {
+    0%{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 @keyframes scale_header_in {
     0%{
         background-color: transparent;
@@ -20,5 +72,25 @@
         background-color: transparent;
         height: 100px;
         border: 1px solid white;
+    }
+}
+@keyframes fade_in {
+    0%{
+        opacity: 0;
+        transform: translatey(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+@keyframes fade_out {
+    0%{
+        opacity: 1;
+        transform: translatey(0px);
+    }
+    100%{
+        opacity: 0;
+        transform: translatey(-10px);
     }
 }

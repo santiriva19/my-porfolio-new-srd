@@ -1,0 +1,136 @@
+@use '../../flex_custom.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Seaweed+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+.container{
+    @include center_center;
+    width: 100%;
+    height: auto;
+    color: white;
+    flex-direction: column;
+    .container_title {
+       @include center_center;
+       flex-direction: column;
+       width: 100%;
+       height: 100vh;
+       padding-top: 4%;
+       h1{
+            width: 100%;
+            font-family: 'Permanent Marker';
+            font-size: 60px;
+            padding: 0;
+            margin: 0;
+            padding-left: 10%;
+            animation: slide_left 0.5s ease;
+        }
+       .container_cards{
+            @include center_start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 95%;
+            height: auto;
+            padding-left: 1%;
+            .card{
+                @include center_center;
+                flex-direction: column;
+                min-width: 300px;
+                max-width: 300px;
+                height: 180px;
+                background-color: black;
+                border: 3px solid white;
+                margin: 1%;
+                cursor: pointer;
+                transition: background-color 0.5s ease;
+                .card_img{
+                    @include center_center;
+                    width: 100%;
+                    height: 60%;
+                    border-bottom: 3px solid white;
+                    transition: border-bottom 0.5s ease;
+                    overflow: hidden;
+                    img{
+                        opacity: 0.4;
+                        width: 100%;
+                        background-size: cover;
+                        transition: opacity 0.5s ease;
+                    }
+                }
+                .card_title{
+                    @include center_center;
+                    color: white;
+                    transition: color 0.5s ease;
+                    width: 100%;
+                    height: 40%;
+                    h3{
+                        font-family: "Nunito";
+                        font-weight: 900;
+                    }
+                }
+            }
+            .card:hover{
+                animation: scale_in 0.5s ease;
+                background-color: white;
+                transform: translateY(-6px);
+                .card_title{
+                    color: black;
+                }
+                .card_img{
+                    border-bottom: 3px solid black;
+                }
+                .card_img{
+                    img{
+                        opacity: 1;
+                    }
+                }
+            }
+            .card:not(:hover){
+                animation: scale_out 0.5s ease;
+                transform: translateY(0px);
+            }
+        }
+        .p_scroll{
+            animation: color_infinite 2s ease infinite;
+        }
+        span{
+            animation: color_infinite 3s ease infinite;
+            font-family: "Nunito";
+        }
+    }
+}
+@keyframes scale_in {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-6px);
+    }
+}
+@keyframes scale_out {
+    0%{
+        transform: translateY(-6px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes slide_left {
+    0%{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes color_infinite {
+    0%{
+        color: rgb(247, 247, 247);
+    }
+    50%{
+        color: rgb(141, 141, 141);
+    }
+    100%{
+        color: rgb(247, 247, 247);
+    }
+}

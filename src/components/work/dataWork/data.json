@@ -1,0 +1,56 @@
+[
+    {
+        "id": 0,
+        "href": "tp-section",
+        "title": "Teleperformance SAS",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+        "direction": "left",
+        "thumbnail": "https://i.ibb.co/Q8nzYW5/Captura-de-Pantalla-2021-11-07-a-la-s-2-19-24-p-m.png",
+        "images-slider": []
+    },
+    {
+        "id": 1,
+        "href": "dm-section",
+        "title": "Cons. Delgado Murcia",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+        "direction": "right",
+        "thumbnail": "https://i.ibb.co/4NwBt3W/dm.png",
+        "images-slider": []
+    },
+    {
+        "id": 2,
+        "href": "sa-section",
+        "title": "Shop Advisor App",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+        "direction": "left",
+        "thumbnail": "https://i.ibb.co/cJ2XJSm/Captura-de-Pantalla-2021-11-07-a-la-s-2-21-09-p-m.png",
+        "images-slider": []
+    },
+    {
+        "id": 3,
+        "href": "gg-section",
+        "title": "G&G Manufacture",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+        "direction": "right",
+        "thumbnail": "https://i.ibb.co/nMd25KK/Captura-de-Pantalla-2021-11-07-a-la-s-2-36-08-p-m.png",
+        "images-slider": []
+    },
+    {
+        "id": 4,
+        "href": "pjs-section",
+        "title": "Fun JavaScript Puzzle",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+        "direction": "left",
+        "thumbnail": "https://i.ibb.co/W5KNScx/Captura-de-Pantalla-2021-11-07-a-la-s-2-39-36-p-m.png",
+        "images-slider": []
+    },
+    {
+        "id": 5,
+        "href": "pc-section",
+        "title": "Productivity in countries",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+        "direction": "right",
+        "thumbnail": "https://i.ibb.co/xXNfgz7/Captura-de-Pantalla-2021-11-07-a-la-s-2-43-46-p-m.png",
+        "images-slider": []
+    }
+]

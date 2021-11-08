@@ -1,0 +1,190 @@
+@use '../../../flex_custom.scss' as *;
+
+.row{
+    @include center_center;
+    flex-direction: row;
+    height: 100vh;
+}
+.col_picture{
+    @include center_center;
+    width: 35vw;
+    height: 100vh;
+}
+.row{
+    @include center_center;
+    flex-direction: row;
+    height: 100vh;
+    .col_description{
+        @include center_start;
+        flex-direction: column;
+        width: 50vw;
+        height: 100vh;
+        margin-left: 5%;
+        padding-right: 2%;
+        h1{
+            width: 100%;
+            font-family: 'Permanent Marker';
+            font-size: 60px;
+        }
+        p{
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            margin-left: 0%;
+            font-size: 17px;
+            color: rgb(255, 255, 255);
+            font-family: 'Nunito';
+        }
+        .row_odd{
+            @include start_center;
+            flex-direction: row;
+            width: 100%;
+        }
+        .row_even{
+            @include end_center;
+            flex-direction: row;
+            width: 100%;
+            margin-right: 10%;
+        }
+        .row_buttons{
+            
+            .button_redirect_black{
+                @include center_center;
+                background-color: black;
+                justify-content: space-evenly;
+                flex-direction: row;
+                width: 20%;
+                height: 50px;
+                margin-left: 0%;
+                border: 3px solid white;
+                user-select: none;
+                cursor: pointer;
+                margin-top: 3%;
+                transition: background-color 0.5s;
+                p{
+                    width: auto;
+                    margin: 0px;
+                    padding: 0px;
+                    font-weight: 800;
+                    color: white;
+                    transition: color 0.5s;
+                }    
+                .icon_button_black{
+                    color: white;
+                    transition: color 0.5s;
+                }
+            }
+            .button_redirect_black:hover {
+                animation: scale_in 0.5s ease;
+                background-color: white;
+                transform: translateY(-6px);
+                p{
+                    color: black;
+                    font-family: "Nunito";
+                }
+                .icon_button_black{
+                    color: black;
+                }
+            }
+            .button_redirect_black:not(:hover){
+                animation: scale_out 0.5s ease;
+                transform: translateY(0px);
+                p{
+                    color: white;
+                }
+                .icon_button_black{
+                    color: white;
+                }
+            }
+            .button_redirect_black:last-child{
+                margin-left: 2%;
+            }
+            .button_redirect_white{
+                @include center_center;
+                background-color: white;
+                justify-content: space-evenly;
+                flex-direction: row;
+                width: 20%;
+                height: 50px;
+                margin-left: 0%;
+                border: 3px solid white;
+                user-select: none;
+                cursor: pointer;
+                margin-top: 3%;
+                transition: background-color 0.5s;
+                .icons_social{
+                    font-size: 24px;
+                    color: black;
+                }
+                p{
+                    width: auto;
+                    margin: 0px;
+                    padding: 0px;
+                    font-weight: 800;
+                    color: black;
+                    transition: color 0.5s;
+                }    
+                .icon_button_white{
+                    color: rgb(0, 0, 0);
+                    transition: color 0.5s;
+                }
+            }
+            .button_redirect_white:hover {
+                animation: scale_in 0.5s ease;
+                background-color: rgb(0, 0, 0);
+                transform: translateY(-6px);
+                p{
+                    color: rgb(255, 255, 255);
+                }
+                .icon_button_white{
+                    color: white;
+                }
+            }
+            .button_redirect_white:not(:hover){
+                animation: scale_out 0.5s ease;
+                transform: translateY(0px);
+                p{
+                    color: black;
+                }
+                .icon_button_white{
+                    color: black;
+                }
+            }
+        }
+    }
+    .col_picture{
+        @include center_center;
+        width: 50vw;
+        height: 100vh;
+        .img_brush_1{
+            background-image: url("../../../images/work/brush-1.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 75%;
+        }
+        .img_brush_2{
+            background-image: url("../../../images/work/brush-2.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 75%;
+        }
+    }
+}
+@keyframes scale_in {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-6px);
+    }
+}
+@keyframes scale_out {
+    0%{
+        transform: translateY(-6px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

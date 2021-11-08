@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import classes from './header.module.scss';
 
 export default function Header(){
@@ -7,22 +6,21 @@ export default function Header(){
             <div className={classes["img_logo"]}>
 
             </div>
-            <nav>
+            <nav id="my_nav">
                 <p 
-                className={ window.location.pathname === "/home" ? classes["active"] : "" }
+                className={ window.location.pathname === "/home" ? classes["active_white"] : "" }
                 onClick={()=> window.location.href="/home"}
                 >
                     Home
                 </p> 
                 <p 
-                className={ window.location.pathname === "/my-work" ? classes["active"] : "" }
+                className={ window.location.pathname === "/my-work" ? classes["active_white"] : "" }
                 onClick={()=> window.location.href="/my-work"}
-
                 >
                     My Work
                 </p> 
                 <p 
-                className={ window.location.pathname === "/contact" ? classes["active"] : "" }
+                className={ window.location.pathname === "/contact" ? classes["active_black"] : "" }
                 onClick={()=> window.location.href="/time"}
 
                 >

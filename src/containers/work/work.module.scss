@@ -1,0 +1,47 @@
+@use '../../flex_custom.scss' as *;
+
+.container{
+    @include center_center;
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    background-color: black;
+    overflow: hidden;
+    z-index: 0;
+    .bubble_back_up{
+        @include center_center;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+        border-radius: 200px;
+        cursor: pointer;
+    }
+    .bubble_back_up:hover{
+        animation: scale_up 0.5s ease;
+        transform: scale(1.1);
+    }
+    .bubble_back_up:not(:hover){
+        animation: scale_down 0.5s ease;
+        transform: scale(1);
+    }
+    
+}
+@keyframes scale_up {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+@keyframes scale_down {
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
