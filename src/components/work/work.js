@@ -1,8 +1,8 @@
 import classes from './work.module.scss';
 import '../../global.css';
 import SectionWork from './section-work/section-work';
-import data from './dataWork/data.json';
-import { faArrowUp, faCircle, faDotCircle } from '@fortawesome/free-solid-svg-icons';
+import data from './data-work/data.json';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Work() {
     const elementInView = (el, dividend = 1) => {
@@ -40,6 +40,7 @@ function Work() {
     window.addEventListener("scroll", () => { 
         handleScrollAnimation();
     });
+   
     return (
         <div className={classes["container"]}>
             <section id="home-work" className={classes["container_title"]}>

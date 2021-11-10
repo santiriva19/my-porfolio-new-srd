@@ -3,20 +3,20 @@ import '../../../global.css';
 import { useEffect } from 'react';
 import { faImages, faMousePointer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { connect } from 'react-redux';
 
-export default function SectionWork(props) {
+function SectionWork(props) {
     useEffect(() => {
         window.addEventListener("mousemove", parallax);
-      }, []);
-    
-      const parallax = (e) => {
-        document.querySelectorAll('.layer').forEach(layer => {
-            const speed = layer.getAttribute('data-speed');
-            const x = (window.innerHeight - e.pageX * speed)/100;
-            const y = (window.innerHeight - e.pageY * speed)/100;
-            layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-        })
-      }
+    }, []);
+    const parallax = (e) => {
+    document.querySelectorAll('.layer').forEach(layer => {
+        const speed = layer.getAttribute('data-speed');
+        const x = (window.innerHeight - e.pageX * speed)/100;
+        const y = (window.innerHeight - e.pageY * speed)/100;
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+    }
     return ( props.element.direction !== "right" ? 
         <section id={props.element.href} className={classes["row"]+" scroll-container"}>
             <div data-speed= "0.5" className={`${classes["col_description"]} scroll-element js-scroll fade-in-left`}>
@@ -41,6 +41,7 @@ export default function SectionWork(props) {
                     <div
                     value="Visit web site"
                     className={classes["button_redirect_black"]}
+                    onClick={()=> props.onModalShowTrue() }
                     >
                         <FontAwesomeIcon 
                             className={classes["icon_button_black"]}
@@ -88,6 +89,7 @@ export default function SectionWork(props) {
                     <div
                     value="Visit web site"
                     className={classes["button_redirect_black"]}
+                    onClick={()=> props.onModalShowTrue() }
                     >
                         <FontAwesomeIcon 
                             className={classes["icon_button_black"]}
@@ -102,3 +104,16 @@ export default function SectionWork(props) {
        
     )
 }
+const mapStateToProps = (state) => {
+    return({
+        showModalWork: state.showModalWork,
+    });
+}
+const mapDispatchToProps = (dispatch) => {
+    return{
+        onModalShowTrue: () => dispatch({ type: "MODAL_IMAGES_TRUE" }),
+        onModalShowFalse: () => dispatch({ type: "MODAL_IMAGES_FALSE" }),
+        
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SectionWork);
