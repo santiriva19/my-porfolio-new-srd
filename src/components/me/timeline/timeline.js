@@ -4,10 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faCss3, faHtml5 } from '@fortawesome/free-brands-svg-icons'
 import { faUniversity, faGraduationCap, faFlagUsa } from '@fortawesome/free-solid-svg-icons'
 import 'react-vertical-timeline-component/style.min.css';
-
 function TimeLineComponent() {
     const containerStyles= {
-        background: 'black', 
+        background: 'black',
         color: '#fff' 
     }
   return (

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|IBM+Plex+Sans:500&display=swap');
 
 :root {
-  --color-primary: #4d4d4d;
+  --color-primary: #808080;
   --color-secondary: #101118;
   --color-accent: #1D1F2F;
   --color-focus: #ffffff;
@@ -86,7 +86,6 @@
     align-items: center;
     background-color: transparent;
     border: 3px solid transparent;
-    border-radius: 100%;
     display: flex;
     height: var(--size);
     padding: 0;

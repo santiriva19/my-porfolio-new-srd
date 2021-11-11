@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Seaweed+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
+:root{
+    --min-width-card: 19rem;
+    --max-width-card: 19rem;
+    --min-height-card: 12rem;
+    --max-height-card: 12rem;
+    --padding-top-cards: 4%;
+    --font-size-title: 60px;
+}
 .container{
     @include center_center;
     width: 100%;
@@ -12,12 +20,12 @@
        @include center_center;
        flex-direction: column;
        width: 100%;
-       height: 100vh;
-       padding-top: 4%;
+       height: auto;
+       padding-top: var( --padding-top-cards);
        h1{
             width: 100%;
             font-family: 'Permanent Marker';
-            font-size: 60px;
+            font-size: var(--font-size-title);
             padding: 0;
             margin: 0;
             padding-left: 10%;
@@ -33,9 +41,9 @@
             .card{
                 @include center_center;
                 flex-direction: column;
-                min-width: 300px;
-                max-width: 300px;
-                height: 180px;
+                min-width: var(--min-width-card);
+                max-width: var(--min-width-card);
+                height: var(--min-height-card);
                 background-color: black;
                 border: 3px solid white;
                 margin: 1%;
@@ -97,6 +105,39 @@
         }
     }
 }
+
+@media only screen and (min-width: 300px)  and (max-width: 414px) {
+    :root{
+        --min-width-card: 80%;
+        --padding-top-cards: 30%;
+        --font-size-title: 20px;
+    }
+}
+@media only screen and (min-width: 415px)  and (max-width: 610px) {
+    :root{
+        --min-width-card: 80%;
+        --padding-top-cards: 18%;
+        --font-size-title: 30px;
+    }
+}
+@media only screen and (min-width: 611px) and (max-width: 680px) {
+    :root{
+        --min-width-card: 80%;
+        --padding-top-cards: 18%;
+        --font-size-title: 30px;
+    }
+}
+@media only screen and (min-width: 681px) and (max-width: 1040px) {
+    :root{
+        --padding-top-cards: 15%;
+    }
+}
+@media only screen and (min-width: 1041px){
+    :root{
+        --padding-top-cards: 8%;
+    }
+}
+
 @keyframes scale_in {
     0%{
         transform: translateY(0px);

@@ -41,7 +41,12 @@ function App(props){
     window.onscroll = function() {
       onScrollFunction();
     };
-  }, []);
+    document.addEventListener('keydown', function(event){
+      if(event.key === "Escape"){
+        props.onModalShowFalse();
+      }
+    });
+  }, [props]);
   const onScrollFunction = () => {
     if(window.pageYOffset > 80) {
       document.getElementById("my_header").style.cssText= " animation: scale_header_in 0.5s ease; height: 60px; background-color: rgba(52, 52, 52, 0.77); border: none;"
@@ -60,14 +65,23 @@ function App(props){
     }
   }
   const renderSliderComponent = () => {
-    console.log(props.showModalWork);
     if(props.showModalWork) {
         return(
             <div className={classes["container_slider"]}>
-                <Slider 
-                heading="Example Slider" 
-                slides={slideData} 
+              <div className={classes["container_button_esc"]}>
+                <input
+                  id="esc_button_id"
+                  type="button"
+                  value="X"
+                  className={classes["button_escape"]}
+                  onClick={()=> props.onModalShowFalse()}
                 />
+                <label> ESC </label>
+              </div>
+              <Slider 
+              heading="Example Slider" 
+              slides={slideData} 
+              />
             </div>
         )
     } else  {
