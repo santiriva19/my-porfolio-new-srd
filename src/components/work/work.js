@@ -30,10 +30,10 @@ function Work() {
         const scrollElements = document.querySelectorAll(".js-scroll"); 
 
         scrollElements.forEach((el) => {
-            if (elementInView(el, 2)) {
-            displayScrollElement(el);
+            if (elementInView(el, 1.3)) {
+                displayScrollElement(el);
             } else if (elementOutofView(el)) {
-            hideScrollElement(el)
+                hideScrollElement(el)
             }
         })
     }

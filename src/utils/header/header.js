@@ -1,10 +1,10 @@
 import classes from './header.module.scss';
-
+import Logo from '../../images/logos/logo-white.png'
 export default function Header(){
     return(
         <div id="my_header" className={classes["container"]}>
             <div className={classes["img_logo"]}>
-
+                <img id ="my_logo" src={Logo} alt ="logo" />
             </div>
             <nav id="my_nav">
                 <p 

@@ -15,14 +15,28 @@ function TimeLineComponent() {
             className="vertical-timeline-element--work"
             contentStyle={containerStyles}
             contentArrowStyle={{ borderRight: '7px solid rgb(118, 42, 218) ' }}
-            date="November 2020 - present"
+            date="December 2021 - present"
+            iconStyle={containerStyles}
+            icon={ <FontAwesomeIcon icon={faReact} size="2x" style={{paddingRight: '15%'}} /> }
+        >
+            <h3 className="vertical-timeline-element-title">Full-Stack Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Austin Software</h4>
+            <p>
+                Developer with React and NodeJS, he have been working with a big company from Sillicon Valley called Truepill.
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={containerStyles}
+            contentArrowStyle={{ borderRight: '7px solid rgb(118, 42, 218) ' }}
+            date="November 2020 - December 2021"
             iconStyle={containerStyles}
             icon={ <FontAwesomeIcon icon={faReact} size="2x" style={{paddingRight: '15%'}} /> }
         >
             <h3 className="vertical-timeline-element-title">Software Devloper</h3>
             <h4 className="vertical-timeline-element-subtitle">Teleperformance - Colombia</h4>
             <p>
-            Main designer and frontend developer of the development team.
+                Main designer and frontend developer of the development team.
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement

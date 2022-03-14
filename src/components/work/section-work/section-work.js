@@ -5,7 +5,7 @@ import { faImages, faMousePointer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux';
 
-function SectionWork(props) {
+function SectionWork( { element, onModalShowTrue } ) {
     useEffect(() => {
         window.addEventListener("mousemove", parallax);
     }, []);
@@ -17,64 +17,32 @@ function SectionWork(props) {
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
     })
     }
-    return ( props.element.direction !== "right" ? 
-        <section id={props.element.href} className={classes["row"]+" scroll-container"}>
-            <div data-speed= "0.5" className={`${classes["col_description"]} scroll-element js-scroll fade-in-left`}>
-                <h1>
-                    {props.element.title}
-                </h1>
-                <p>
-                    {props.element.description} 
-                </p>
-                <div className={classes["row_buttons"]+" "+classes["row_odd"]}>
-                    <div
-                    value="Visit web site"
-                    className={classes["button_redirect_white"]}
-                    >
-                        <FontAwesomeIcon 
-                            icon={faMousePointer}
-                            className={classes["icon_button_white"]}
-                            size="2x"
-                        />
-                        <p>Go visit</p>
-                    </div>
-                    <div
-                    value="Visit web site"
-                    className={classes["button_redirect_black"]}
-                    onClick={()=> props.onModalShowTrue() }
-                    >
-                        <FontAwesomeIcon 
-                            className={classes["icon_button_black"]}
-                            icon={faImages}
-                            size="2x"
-                        />
-                        <p>Gallery</p>
-                    </div>
-                </div>
-            </div>
-            <div className={classes["col_picture"]}>
-                <div data-speed= "0.5" className={`${classes["img_brush_1"]} scroll-element js-scroll fade-in-right`}>
-                </div>
-            </div>
-        </section> 
-        :
-        <section id={props.element.href} className={classes["row"]+" scroll-container"}>
-            <div className={classes["col_picture"]}>
-                <div data-speed= "1" className={`${classes["img_brush_2"]} scroll-element js-scroll fade-in-left`}>
 
+    const columnImgBrush = (direction) => {
+        return(
+            <div className={classes["col_picture"]}>
+                <div data-speed= "0.5" className={`${classes[direction === 'right' ? "img_brush_1" : "img_brush_2"]} scroll-element js-scroll fade-in-right ${direction === 'right' ? 'fade-in-left' : 'fade-in-right'} `}>
+                    { element.images_description.map((image, indexImg) => {
+                        const speedParallax = 0.15*indexImg+0.3;
+                        return(
+                                <div data-speed={`${speedParallax}`} className={`${classes[direction === "right" ? "square_img_type_right_"+indexImg : "square_img_type_left_"+indexImg]} ${classes["img_description"]} js-scroll layer`} style={{backgroundImage: `url(${image})`}} />                        
+                            )
+                    }) }
                 </div>
-            </div>  
-            <div 
-            data-speed= "0.8"
-            className={`${classes["col_description"]} scroll-element js-scroll fade-in-right`}
-            >
+            </div>
+        )
+    }
+
+    const columnInfoWork = (direction) => {
+        return(
+            <div data-speed= "0.5" className={`${classes["col_description"]} scroll-element js-scroll ${direction === 'right' ? 'fade-in-right' : 'fade-in-left'}`}>
                 <h1>
-                    {props.element.title}
+                    {element.title}
                 </h1>
                 <p>
-                    {props.element.description} 
+                    {element.description} 
                 </p>
-                <div className={classes["row_buttons"]+" "+classes["row_even"]}>
+                <div className={classes["row_buttons"]+" "+classes[direction === 'right' ? "row_odd" : "row_even"]}>
                     <div
                     value="Visit web site"
                     className={classes["button_redirect_white"]}
@@ -89,7 +57,7 @@ function SectionWork(props) {
                     <div
                     value="Visit web site"
                     className={classes["button_redirect_black"]}
-                    onClick={()=> props.onModalShowTrue() }
+                    onClick={()=> onModalShowTrue() }
                     >
                         <FontAwesomeIcon 
                             className={classes["icon_button_black"]}
@@ -100,8 +68,14 @@ function SectionWork(props) {
                     </div>
                 </div>
             </div>
+        )
+    }
+
+    return (
+        <section id={element.href} className={classes["row"]+" scroll-container"}>
+            {element.direction !== "right" ?  columnInfoWork(element.direction) : columnImgBrush(element.direction)}
+            {element.direction !== "right" ? columnImgBrush(element.direction) : columnInfoWork(element.direction)}
         </section>
-       
     )
 }
 const mapStateToProps = (state) => {

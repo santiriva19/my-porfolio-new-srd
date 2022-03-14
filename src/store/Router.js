@@ -50,8 +50,10 @@ function App(props){
   const onScrollFunction = () => {
     if(window.pageYOffset > 80) {
       document.getElementById("my_header").style.cssText= " animation: scale_header_in 0.5s ease; height: 60px; background-color: rgba(52, 52, 52, 0.77); border: none;"
+      document.getElementById("my_logo").style.cssText= " width: 3%;"
     } else {
       document.getElementById("my_header").style.cssText= "animation: scale_header_out 0.5s ease; height: 100px; background-color: transparent; border: 1px solid white; "
+      document.getElementById("my_logo").style.cssText= " width: 6%;"
     }
   }
   const renderWorkBackground = () => {

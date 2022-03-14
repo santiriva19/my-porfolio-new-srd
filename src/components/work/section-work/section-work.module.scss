@@ -53,7 +53,6 @@
             margin-right: 10%;
         }
         .row_buttons{
-            
             .button_redirect_black{
                 @include center_center;
                 background-color: black;
@@ -162,6 +161,7 @@
         @include center_center;
         width: 50vw;
         height: 100vh;
+        position: relative;
         .img_brush_1{
             background-image: url("../../../images/work/brush-1.png");
             background-size: contain;
@@ -178,6 +178,59 @@
             background-position: center;
             width: var(--width-img-brush);
             height: var(--height-img-brush);
+        }
+        .img_description {
+            @include center_center;
+            position: absolute;
+            top: auto;
+            bottom: auto;
+            right: auto;
+            left: auto;
+            width: 350px;
+            height: 180px;
+            background-color: transparent;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat; 
+            border: 5px solid white;
+            box-shadow: 0px 12px 10px rgba(43, 43, 43, 0.267);
+            transition-delay: 0.7s;
+        } 
+        // for right
+        .square_img_type_right_0 {
+           left: 10%;
+           top: 25%;
+        }
+        .square_img_type_right_1 {
+           right: 10%;
+           top: 20%;
+        }
+        .square_img_type_right_2 {
+           right: 5%;
+           bottom: 37%;
+           z-index: 4;
+        }
+        .square_img_type_right_3 {
+           left: 15%;
+           bottom: 30%;
+        }
+        // for left
+        .square_img_type_left_0 {
+           left: 8%;
+           top: 20%;
+        }
+        .square_img_type_left_1 {
+           right: 18%;
+           top: 25%;
+           padding-left: 1%;
+        }
+        .square_img_type_left_2 {
+           right: 13%;
+           bottom: 30%;
+        }
+        .square_img_type_left_3 {
+           left: 4%;
+           bottom: 35%;
         }
     }
 }
@@ -217,5 +270,15 @@
     }
     100%{
         transform: translateY(0px);
+    }
+}
+@keyframes fade_in {
+    0%{
+        opacity: 0;
+        transform: translatey(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0px);
     }
 }
