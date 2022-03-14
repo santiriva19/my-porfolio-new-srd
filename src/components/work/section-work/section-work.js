@@ -5,7 +5,7 @@ import { faImages, faMousePointer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux';
 
-function SectionWork( { element, onModalShowTrue } ) {
+function SectionWork( { element, onModalShowTrue, onChangingSliderImages} ) {
     useEffect(() => {
         window.addEventListener("mousemove", parallax);
     }, []);
@@ -17,7 +17,10 @@ function SectionWork( { element, onModalShowTrue } ) {
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
     })
     }
-
+    const handleSliderImages = () => {
+        console.log(element.id, "KEY");
+        onChangingSliderImages(element.id);
+    }    
     const columnImgBrush = (direction) => {
         return(
             <div className={classes["col_picture"]}>
@@ -46,6 +49,7 @@ function SectionWork( { element, onModalShowTrue } ) {
                     <div
                     value="Visit web site"
                     className={classes["button_redirect_white"]}
+                    onClick={() => window.open(element.redirectTo , '_blank')}
                     >
                         <FontAwesomeIcon 
                             icon={faMousePointer}
@@ -57,7 +61,7 @@ function SectionWork( { element, onModalShowTrue } ) {
                     <div
                     value="Visit web site"
                     className={classes["button_redirect_black"]}
-                    onClick={()=> onModalShowTrue() }
+                    onClick={() => handleSliderImages()}
                     >
                         <FontAwesomeIcon 
                             className={classes["icon_button_black"]}
@@ -70,7 +74,7 @@ function SectionWork( { element, onModalShowTrue } ) {
             </div>
         )
     }
-
+    
     return (
         <section id={element.href} className={classes["row"]+" scroll-container"}>
             {element.direction !== "right" ?  columnInfoWork(element.direction) : columnImgBrush(element.direction)}
@@ -87,7 +91,7 @@ const mapDispatchToProps = (dispatch) => {
     return{
         onModalShowTrue: () => dispatch({ type: "MODAL_IMAGES_TRUE" }),
         onModalShowFalse: () => dispatch({ type: "MODAL_IMAGES_FALSE" }),
-        
+        onChangingSliderImages : indexOfElement => dispatch({ type: "SET_SLIDER_IMAGES", payload: indexOfElement })
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(SectionWork);

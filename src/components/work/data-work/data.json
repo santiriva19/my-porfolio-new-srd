@@ -5,9 +5,35 @@
         "title": "Austin Software",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
         "direction": "right",
+        "redirectTo": "https://www.austinsoftware.com/",
         "thumbnail": "https://i.ibb.co/zQq2NRt/i-Phone-X-XS-11-Pro-21.png",
         "images_description": ["https://i.ibb.co/xsRhR9X/i-Phone-X-XS-11-Pro-28.png", "https://i.ibb.co/zQq2NRt/i-Phone-X-XS-11-Pro-21.png", "https://i.ibb.co/DL4M9NP/i-Phone-X-XS-11-Pro-27.png", "https://i.ibb.co/2tgH1nF/i-Phone-X-XS-11-Pro-29.png"],
-        "images_slider": []
+        "images_slider": [
+            {
+                "index": 0,
+                "headline": "New Fashion Apparel",
+                "button": "Shop now",
+                "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+            },
+            {
+                "index": 1,
+                "headline": "In The Wilderness",
+                "button": "Book travel",
+                "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/forest.jpg"
+            },
+            {
+                "index": 2,
+                "headline": "For Your Current Mood",
+                "button": "Listen",
+                "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/guitar.jpg"
+            },
+            {
+                "index": 3,
+                "headline": "Focus On The Writing",
+                "button": "Get Focused",
+                "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg"
+            }
+        ]
     },
     {
         "id": 1,
@@ -15,6 +41,7 @@
         "title": "Teleperformance SAS",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
         "direction": "left",
+        "redirectTo": "https://www.teleperformance.com/",
         "thumbnail": "https://i.ibb.co/Q8nzYW5/Captura-de-Pantalla-2021-11-07-a-la-s-2-19-24-p-m.png",
         "images_description": ["https://i.ibb.co/bzGXBRg/i-Phone-X-XS-11-Pro-25.png", "https://i.ibb.co/Q8nzYW5/Captura-de-Pantalla-2021-11-07-a-la-s-2-19-24-p-m.png", "https://i.ibb.co/xFCs8VT/i-Phone-X-XS-11-Pro-24.png", "https://i.ibb.co/SsvRHDD/i-Phone-X-XS-11-Pro-26.png"],
         "images_slider": []
@@ -25,6 +52,7 @@
         "title": "Cons. Delgado Murcia",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
         "direction": "right",
+        "redirectTo": "http://consorciodelgadomurcia.com/",
         "thumbnail": "https://i.ibb.co/MSWtxg8/i-Phone-X-XS-11-Pro-23.png",
         "images_description": ["https://i.ibb.co/Gd6ShDq/i-Phone-X-XS-11-Pro-31.png", "https://i.ibb.co/MSWtxg8/i-Phone-X-XS-11-Pro-23.png", "https://i.ibb.co/SPjSknC/i-Phone-X-XS-11-Pro-30.png", "https://i.ibb.co/KqDkZCb/i-Phone-X-XS-11-Pro-32.png"],
         "images_slider": []
@@ -35,6 +63,7 @@
         "title": "Shop Advisor App",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
         "direction": "left",
+        "redirectTo": "#",
         "thumbnail": "https://i.ibb.co/cJ2XJSm/Captura-de-Pantalla-2021-11-07-a-la-s-2-21-09-p-m.png",
         "images_description": ["https://i.ibb.co/RzsgQnW/i-Phone-X-XS-11-Pro-34.png", "https://i.ibb.co/cJ2XJSm/Captura-de-Pantalla-2021-11-07-a-la-s-2-21-09-p-m.png", "https://i.ibb.co/d71QNRH/i-Phone-X-XS-11-Pro-35.png",  "https://i.ibb.co/WzvWJcT/i-Phone-X-XS-11-Pro-33.png"],
         "images_slider": []
@@ -45,9 +74,36 @@
         "title": "G&G Manufacture",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
         "direction": "right",
+        "redirectTo": "https://g-g-manufacture.web.app/bienvenido",
         "thumbnail": "https://i.ibb.co/HG2TVz5/i-Phone-X-XS-11-Pro-18.png",
         "images_description": ["https://i.ibb.co/7RbwTpz/i-Phone-X-XS-11-Pro-38.png", "https://i.ibb.co/HG2TVz5/i-Phone-X-XS-11-Pro-18.png", "https://i.ibb.co/17RZCgW/i-Phone-X-XS-11-Pro-36.png", "https://i.ibb.co/fpXpVGv/i-Phone-X-XS-11-Pro-37.png"],
-        "images_slider": []
+        "images_slider": [
+            {
+                "index": 0,
+                "headline": "New Fashion Apparel",
+                "button": "Shop now",
+                "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg"
+            },
+            {
+                "index": 1,
+                "headline": "In The Wilderness",
+                "button": "Book travel",
+                "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/forest.jpg"
+            },
+            {
+                "index": 2,
+                "headline": "For Your Current Mood",
+                "button": "Listen",
+                "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/guitar.jpg"
+            },
+            {
+                "index": 3,
+                "headline": "Focus On The Writing",
+                "button": "Get Focused",
+                "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg"
+            }
+        ]
+        
     },
     {
         "id": 5,
@@ -55,6 +111,7 @@
         "title": "Productivity in countries",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
         "direction": "left",
+        "redirectTo": "https://seminario-spg.firebaseapp.com/index.html#secPregunta",
         "thumbnail": "https://i.ibb.co/xXNfgz7/Captura-de-Pantalla-2021-11-07-a-la-s-2-43-46-p-m.png",
         "images_description": ["https://i.ibb.co/5vSVqNV/i-Phone-X-XS-11-Pro-40.png", "https://i.ibb.co/xXNfgz7/Captura-de-Pantalla-2021-11-07-a-la-s-2-43-46-p-m.png", "https://i.ibb.co/TM7SKK0/i-Phone-X-XS-11-Pro-41.png", "https://i.ibb.co/thNpR0k/i-Phone-X-XS-11-Pro-39.png"],
         "images_slider": []

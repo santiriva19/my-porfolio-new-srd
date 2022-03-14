@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import MeComponent from "../containers/me/me";
 import classes from './Router.module.scss'
 import Header from "../utils/header/header";
@@ -11,32 +11,8 @@ import Slider from '../components/work/slider-images/slider-image';
 import { connect } from 'react-redux';
 
 function App(props){
-  const slideData = [
-    {
-      index: 0,
-      headline: 'New Fashion Apparel',
-      button: 'Shop now',
-      src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg'
-    },
-    {
-      index: 1,
-      headline: 'In The Wilderness',
-      button: 'Book travel',
-      src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/forest.jpg'
-    },
-    {
-      index: 2,
-      headline: 'For Your Current Mood',
-      button: 'Listen',
-      src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/guitar.jpg'
-    },
-    {
-      index: 3,
-      headline: 'Focus On The Writing',
-      button: 'Get Focused',
-      src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg'
-    }
-]
+  console.log(props, "SLIDER");
+
   useEffect(() => {
     window.onscroll = function() {
       onScrollFunction();
@@ -81,8 +57,8 @@ function App(props){
                 <label> ESC </label>
               </div>
               <Slider 
-              heading="Example Slider" 
-              slides={slideData} 
+              heading="Slider Of Images" 
+              slides={props.sliderImages} 
               />
             </div>
         )
@@ -93,7 +69,7 @@ function App(props){
   return(
       <div id="my_app" className={classes["container"]}>
         {renderWorkBackground()}
-        {renderSliderComponent()}
+        { props.sliderImages && renderSliderComponent()}
         <Header/>
         <Router>
           <AnimatedSwitch
@@ -110,9 +86,11 @@ function App(props){
   );
 }
 const mapStateToProps = (state) => {
-  return({
+  console.log(state, "STT");
+  return {
       showModalWork: state.showModalWork,
-  });
+      sliderImages: state.sliderImages
+  };
 }
 const mapDispatchToProps = (dispatch) => {
   return{

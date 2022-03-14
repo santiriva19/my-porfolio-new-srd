@@ -27,8 +27,11 @@
         width: 50%;
         z-index: 3;
         animation: slide_left 0.8s ease;
+        opacity: 0.7;
     }
     .img_bg_1, .img_bg_2, .img_bg_3{
+        left: -1%;
+        top: -1%;
         height: 100vh;
         background-position: left top;
         background-repeat: no-repeat;
@@ -111,9 +114,7 @@
         height: 100%;
         z-index: 1000;
         .picture{
-            background-image: url('../../../images/me/me.png');
-            width: 70%;
-            height: 70%;
+            width: 30%;
             background-repeat: no-repeat;
             background-size: contain;
         }

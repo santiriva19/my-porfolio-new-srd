@@ -255,6 +255,12 @@
         width: 80vw !important;
         margin-top: 1%;
     }
+    .row_buttons {
+        justify-content: space-around !important;
+        .button_redirect_white, .button_redirect_black{
+            width: 50% !important;
+        }
+    }
 }
 @keyframes scale_in {
     0%{

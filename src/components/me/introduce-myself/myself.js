@@ -38,8 +38,9 @@ function IntroducingMS() {
             <div data-speed= "2" className={classes["img_bg_2"]+ " layer"} />
             <div data-speed= "1.5" className={classes["img_bg_3"]+ " layer"} />
 
-            <div className={classes["column_picture"]}>
-                {/* <div data-speed= "0.8" className={classes["picture"]+ " layer"} /> */}
+            <div data-speed= "1" className={`${classes["column_picture"]} layer`}>
+                {/* <img className={classes["picture"]} src="https://i.ibb.co/XpVKGDZ/Imagen-7.png" alt="img" border="0"/> */}
+                <img className={classes["picture"]} src="https://i.ibb.co/rfn45XZ/Imagen-2.png" alt="img" border="0"/>
             </div>
             <div data-speed= "0.8" className={classes["column_info"]+ " layer"}>
                 <h1>Santiago Rivadeneira</h1>
