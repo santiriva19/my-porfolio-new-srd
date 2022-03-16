@@ -129,9 +129,15 @@
     .column_info{
         width: 100% !important;
         padding-left: 10%;
+        h1{
+            font-size: 60px !important;
+        }
     }
     .column_picture, .img_bg_1, .img_bg_2, .img_bg_3{
         display: none !important;
+    }
+    .button_redirect {
+        width: 25% !important;
     }
 }
 @keyframes scale_in {

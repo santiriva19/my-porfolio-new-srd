@@ -1,0 +1,11 @@
+@use '../../flex_custom.scss' as *;
+
+.container {
+    @include center_center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: black;
+    overflow: hidden;
+    z-index: 0;
+}

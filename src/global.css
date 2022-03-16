@@ -28,7 +28,39 @@ html {
 
 .scroll-element,
 .scroll-caption {
-width: 100%;
+    width: 100%;
+}
+.bm-menu-wrap {
+    z-index: 100000000 !important;
+    right: 0 !important;
+    background-color: white;
+    width: 70% !important;
+    padding-top: 15%;
+}
+.bm-menu-wrap div nav a {
+    font-family:  'Nunito';
+    margin-left: 15% !important;
+    margin-top: 7% !important;
+    font-size: 40px;
+    color: black;
+    transition: all 0.5s ease;
+}
+.bm-menu-wrap input {
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    border: none;
+    background: transparent;
+    font-size: 47px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.bm-menu-wrap input:hover, .bm-menu-wrap div nav a:hover{
+    transform: scale(1.1);
+}
+.bm-menu-wrap div nav a:focus-visible, .bm-menu-wrap input:focus-visible {
+    outline: none;
 }
 @keyframes slide_rigth {
     0%{

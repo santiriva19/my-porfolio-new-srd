@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|IBM+Plex+Sans:500&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|IBM+Plex+Sans:500&display=swap");
 
 :root {
-  --color-primary: #808080;
+  --color-primary: #5e5e5e;
   --color-secondary: #101118;
-  --color-accent: #1D1F2F;
+  --color-accent: #2a2b2e;
   --color-focus: #ffffff;
   --base-duration: 600ms;
   --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
@@ -31,20 +31,10 @@
   width: 1px;
 }
 
-
-// =========================
-// Icons
-// =========================
-
 .icon {
   fill: var(--color-primary);
   width: 100%;
 }
-
-
-// =========================
-// Buttons
-// =========================
 
 .btn {
   background-color: var(--color-primary);
@@ -55,7 +45,11 @@
   font-family: inherit;
   font-size: inherit;
   padding: 1rem 2.5rem 1.125rem;
-  
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--color-accent);
+  }
+
   &:focus {
     outline-color: var(--color-focus);
     outline-offset: 2px;

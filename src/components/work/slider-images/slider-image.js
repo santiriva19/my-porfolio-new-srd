@@ -33,7 +33,7 @@ import './slider-images.scss';
     }
     
     render() {
-      const { src, button, headline, index } = this.props.slide
+      const { src, button, headline, index, titleColor } = this.props.slide
       const current = this.props.current
       let classNames = 'slide'
       
@@ -59,8 +59,8 @@ import './slider-images.scss';
           </div>
           
           <article className="slide__content">
-            <h2 className="slide__headline">{headline}</h2>
-            <button className="slide__action btn">{button}</button>
+            {headline && (<h2 style={{color: titleColor}} className="slide__headline">{headline}</h2> )}
+            {button && (<button className="slide__action btn">{button}</button>)} 
           </article>
         </li>
       )

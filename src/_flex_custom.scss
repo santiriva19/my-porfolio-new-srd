@@ -43,3 +43,13 @@
     justify-content: flex-end;
     align-items: flex-end;
 }
+@mixin spacearound_start{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+@mixin space_between_start{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
