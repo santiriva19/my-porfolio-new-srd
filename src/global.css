@@ -1,5 +1,8 @@
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
 }
 .scroll-container {
   height: 100vh;
@@ -17,112 +20,114 @@ html {
   opacity: 1;
 }
 .scrolled.fade-in-right {
-  animation: slide_rigth 0.8s ease;
+  animation: slide_right 0.8s ease;
 }
 .scrolled.fade-in-left {
   animation: slide_left 0.8s ease;
 }
 .scroll-element {
-    height: 100%;
+  height: 100%;
 }
 
 .scroll-element,
 .scroll-caption {
-    width: 100%;
+  width: 100%;
 }
 .bm-menu-wrap {
-    z-index: 100000000 !important;
-    right: 0 !important;
-    background-color: white;
-    width: 70% !important;
-    padding-top: 15%;
+  z-index: 100000000 !important;
+  right: 0 !important;
+  background-color: white;
+  width: 70% !important;
+  padding-top: 15%;
 }
 .bm-menu-wrap div nav a {
-    font-family:  'Nunito';
-    margin-left: 15% !important;
-    margin-top: 7% !important;
-    font-size: 40px;
-    color: black;
-    transition: all 0.5s ease;
+  font-family: "Nunito";
+  margin-left: 15% !important;
+  margin-top: 7% !important;
+  font-size: 40px;
+  color: black;
+  transition: all 0.5s ease;
 }
 .bm-menu-wrap input {
-    display: block;
-    position: absolute;
-    top: 2%;
-    right: 5%;
-    border: none;
-    background: transparent;
-    font-size: 47px;
-    cursor: pointer;
-    transition: all 0.5s ease;
+  display: block;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  border: none;
+  background: transparent;
+  font-size: 47px;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
-.bm-menu-wrap input:hover, .bm-menu-wrap div nav a:hover{
-    transform: scale(1.1);
+.bm-menu-wrap input:hover,
+.bm-menu-wrap div nav a:hover {
+  transform: scale(1.1);
 }
-.bm-menu-wrap div nav a:focus-visible, .bm-menu-wrap input:focus-visible {
-    outline: none;
+.bm-menu-wrap div nav a:focus-visible,
+.bm-menu-wrap input:focus-visible {
+  outline: none;
 }
-@keyframes slide_rigth {
-    0%{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
+@keyframes slide_right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 @keyframes slide_left {
-    0%{
-        opacity: 0;
-        transform: translateX(-300px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 @keyframes scale_header_in {
-    0%{
-        background-color: transparent;
-        height: 100px;
-        border: 1px solid white;
-    }
-    100%{
-        background-color: rgba(52, 52, 52, 0.77);
-        height: 60px;
-        border: none;
-    }
+  0% {
+    background-color: transparent;
+    height: 100px;
+    border: 1px solid white;
+  }
+  100% {
+    background-color: rgba(52, 52, 52, 0.77);
+    height: 60px;
+    border: none;
+  }
 }
 @keyframes scale_header_out {
-    0%{
-        background-color: rgba(52, 52, 52, 0.77);
-        height: 60px;
-        border: none;
-    }
-    100%{
-        background-color: transparent;
-        height: 100px;
-        border: 1px solid white;
-    }
+  0% {
+    background-color: rgba(52, 52, 52, 0.77);
+    height: 60px;
+    border: none;
+  }
+  100% {
+    background-color: transparent;
+    height: 100px;
+    border: 1px solid white;
+  }
 }
 @keyframes fade_in {
-    0%{
-        opacity: 0;
-        transform: translatey(-10px);
-    }
-    100%{
-        opacity: 1;
-        transform: translatey(0px);
-    }
+  0% {
+    opacity: 0;
+    transform: translatey(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0px);
+  }
 }
 @keyframes fade_out {
-    0%{
-        opacity: 1;
-        transform: translatey(0px);
-    }
-    100%{
-        opacity: 0;
-        transform: translatey(-10px);
-    }
+  0% {
+    opacity: 1;
+    transform: translatey(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translatey(-10px);
+  }
 }

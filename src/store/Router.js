@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import MeComponent from "../containers/me/me";
 import classes from "./Router.module.scss";
 import Header from "../utils/header/header";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "../global.css";
 import WorkComponent from "../containers/work/work";
 import Footer from "../utils/footer/footer";
@@ -46,18 +46,14 @@ function App(props) {
     }
   };
   const renderWorkBackground = () => {
-    if (window.location.pathname === "/my-work") {
+    if (
+      window.location.pathname === "/my-work" ||
+      window.location.pathname === "/contact"
+    ) {
       return (
         <>
           <div data-speed="2" className={classes["bg_1"] + " layer"} />
           <div data-speed="1" className={classes["bg_2"] + " layer"} />
-        </>
-      );
-    } else if (window.location.pathname === "/contact") {
-      return (
-        <>
-          <div data-speed="2" className={classes["bg_1_contact"] + " layer"} />
-          <div data-speed="1" className={classes["bg_2_contact"] + " layer"} />
         </>
       );
     }
@@ -107,12 +103,12 @@ function App(props) {
       )}
 
       <Header setShowHamburguer={setShowHamburguer} />
-      <Router>
-        <Route exact path="/" component={MeComponent} />
-        <Route exact path="/home" component={MeComponent} />
-        <Route exact path="/my-work" component={WorkComponent} />
-        <Route exact path="/contact" component={ContactPage} />
-      </Router>
+      <Routes>
+        <Route exact path="/" element={<MeComponent />} />
+        <Route exact path="/home" element={<MeComponent />} />
+        <Route exact path="/my-work" element={<WorkComponent />} />
+        <Route exact path="/contact" element={<ContactPage />} />
+      </Routes>
       <Footer />
     </div>
   );

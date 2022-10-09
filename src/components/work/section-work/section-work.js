@@ -35,6 +35,7 @@ function SectionWork({ element, onModalShowTrue, onChangingSliderImages }) {
             const speedParallax = 0.15 * indexImg + 0.3;
             return (
               <div
+                key={indexImg}
                 data-speed={`${speedParallax}`}
                 className={`${
                   classes[
@@ -50,12 +51,6 @@ function SectionWork({ element, onModalShowTrue, onChangingSliderImages }) {
         </div>
       </div>
     );
-  };
-
-  const stringToHTML = str => {
-    var dom = document.createElement("div");
-    dom.innerHTML = str;
-    return dom;
   };
 
   const columnInfoWork = direction => {
