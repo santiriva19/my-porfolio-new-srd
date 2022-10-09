@@ -58,11 +58,9 @@ function IntroducingMS() {
           Universidad de la Sabana
         </p>
         <br />
+        <p className={classes["text_description"]}>Welcome to my portfolio!</p>
         <p className={classes["text_description"]}>
-          Welcome to my portfolio, Nice to meet you!
-        </p>
-        <p className={classes["text_description"]}>
-          Here you can take a look at my latest work &#128640;
+          Here you can take a look at my latest works &#128640;
         </p>
         <div className={classes["cont_buttons_social"]}>
           {buttonsSocial.map(element => {
