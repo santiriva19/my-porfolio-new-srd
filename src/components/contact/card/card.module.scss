@@ -90,7 +90,29 @@
     width: 60%;
   }
 }
-@media only screen and (min-width: 300px) and (max-width: 799px) {
+@media only screen and (min-width: 200px) and (max-width: 500px) {
+  .container_img img {
+    height: 24% !important;
+  }
+  .info_card {
+    font-size: 11px;
+  }
+  .button_redirect_white {
+    height: 87%;
+  }
+  .container {
+    height: 300px;
+    h1 {
+      font-size: 25px;
+    }
+  }
+}
+@media only screen and (max-width: 300px) {
+  .container {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 799px) {
   .container {
     width: 80%;
   }
