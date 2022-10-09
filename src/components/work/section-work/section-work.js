@@ -22,34 +22,36 @@ function SectionWork({ element, onModalShowTrue, onChangingSliderImages }) {
   };
   const columnImgBrush = direction => {
     return (
-      <div className={classes["col_picture"]}>
-        <div
-          data-speed="0.5"
-          className={`${
-            classes[direction === "right" ? "img_brush_1" : "img_brush_2"]
-          } scroll-element js-scroll fade-in-right ${
-            direction === "right" ? "fade-in-left" : "fade-in-right"
-          } `}
-        >
-          {element.images_description.map((image, indexImg) => {
-            const speedParallax = 0.15 * indexImg + 0.3;
-            return (
-              <div
-                key={indexImg}
-                data-speed={`${speedParallax}`}
-                className={`${
-                  classes[
-                    direction === "right"
-                      ? "square_img_type_right_" + indexImg
-                      : "square_img_type_left_" + indexImg
-                  ]
-                } ${classes["img_description"]} js-scroll layer`}
-                style={{ backgroundImage: `url(${image})` }}
-              />
-            );
-          })}
+      screen.width > 600 && (
+        <div className={classes["col_picture"]}>
+          <div
+            data-speed="0.5"
+            className={`${
+              classes[direction === "right" ? "img_brush_1" : "img_brush_2"]
+            } scroll-element js-scroll fade-in-right ${
+              direction === "right" ? "fade-in-left" : "fade-in-right"
+            } `}
+          >
+            {element.images_description.map((image, indexImg) => {
+              const speedParallax = 0.15 * indexImg + 0.3;
+              return (
+                <div
+                  key={indexImg}
+                  data-speed={`${speedParallax}`}
+                  className={`${
+                    classes[
+                      direction === "right"
+                        ? "square_img_type_right_" + indexImg
+                        : "square_img_type_left_" + indexImg
+                    ]
+                  } ${classes["img_description"]} js-scroll layer`}
+                  style={{ backgroundImage: `url(${image})` }}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )
     );
   };
 
