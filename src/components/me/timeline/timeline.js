@@ -36,7 +36,7 @@ function TimeLineComponent() {
         </h3>
         <h4 className="vertical-timeline-element-subtitle">Austin Software</h4>
         <p>
-          Developer with React and NodeJS, he have been working with a big
+          Developer with React and NodeJS, he has been working with a big
           company from Silicon Valley called Truepill.
         </p>
       </VerticalTimelineElement>
