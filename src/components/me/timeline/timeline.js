@@ -37,7 +37,7 @@ function TimeLineComponent() {
         <h4 className="vertical-timeline-element-subtitle">Austin Software</h4>
         <p>
           Developer with React and NodeJS, he have been working with a big
-          company from Sillicon Valley called Truepill.
+          company from Silicon Valley called Truepill.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -58,7 +58,7 @@ function TimeLineComponent() {
         <h4 className="vertical-timeline-element-subtitle">
           Teleperformance - Colombia
         </h4>
-        <p>Main designer and frontend developer of the development team.</p>
+        <p>Main designer and frontend developer for the development team.</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -79,8 +79,8 @@ function TimeLineComponent() {
           Consorcio Delgado Murcia - Colombia
         </h4>
         <p>
-          Built, developed and implemented a web page responsive and fully
-          informative.
+          Built, developed and implemented fully informative and responsive web
+          page.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -164,7 +164,7 @@ function TimeLineComponent() {
         <h4 className="vertical-timeline-element-subtitle">
           Alonzo And Tracy Mourning - Miami, FL
         </h4>
-        <p>Attended 9th grade in Miami for learning english.</p>
+        <p>Attended 9th grade to further develop english skills.</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -186,7 +186,7 @@ function TimeLineComponent() {
         <h4 className="vertical-timeline-element-subtitle">
           Norman S. Edelcurp K-8 - Miami, FL
         </h4>
-        <p>Attended 6th grade in Miami for learning english.</p>
+        <p>Attended 6th grade in Miami to learn english.</p>
       </VerticalTimelineElement>
     </VerticalTimeline>
   );
