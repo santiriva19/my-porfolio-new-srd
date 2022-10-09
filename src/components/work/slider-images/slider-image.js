@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./slider-images.scss";
+import "./slider-images.css";
 class Slide extends Component {
   constructor(props) {
     super(props);
