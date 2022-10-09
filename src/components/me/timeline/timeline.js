@@ -79,8 +79,8 @@ function TimeLineComponent() {
           Consorcio Delgado Murcia - Colombia
         </h4>
         <p>
-          Built, developed and implemented fully informative and responsive web
-          page.
+          Built, developed and implemented a fully informative and responsive
+          web page.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
