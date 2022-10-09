@@ -63,6 +63,7 @@
     cursor: pointer;
     margin-top: 3%;
     transition: all 0.5s ease;
+    text-decoration: none !important;
     p{
         width: auto;
         margin: 0px;
@@ -70,7 +71,7 @@
         font-weight: 800;
         color: black;
         transition: color 0.5s;
-    } 
+    }
     .icon_button_white{
         color: rgb(0, 0, 0);
         transition: color 0.5s ease;

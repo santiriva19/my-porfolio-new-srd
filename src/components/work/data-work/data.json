@@ -1,147 +1,169 @@
 [
-    {
-        "id": 0,
-        "href": "as-section",
-        "title": "Austin Software",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-        "direction": "right",
-        "redirectTo": "https://www.austinsoftware.com/",
-        "thumbnail": "https://i.ibb.co/zQq2NRt/i-Phone-X-XS-11-Pro-21.png",
-        "images_description": ["https://i.ibb.co/xsRhR9X/i-Phone-X-XS-11-Pro-28.png", "https://i.ibb.co/zQq2NRt/i-Phone-X-XS-11-Pro-21.png", "https://i.ibb.co/DL4M9NP/i-Phone-X-XS-11-Pro-27.png", "https://i.ibb.co/2tgH1nF/i-Phone-X-XS-11-Pro-29.png"],
-        "images_slider": [
-            {
-                "index": 0,
-                "headline": "JavaScript Fullstack Developer",
-                "button": "Shop now",
-                "src": "https://i.ibb.co/BK9024v/i-Phone-X-XS-11-Pro-43.png"
-            },
-            {
-                "index": 1,
-                "headline": "Certified in SCRUM",
-                "button": "See certifications",
-                "src": "https://i.ibb.co/V3yQ9vV/i-Phone-X-XS-11-Pro-44.png"
-            },
-            {
-                "index": 2,
-                "headline": "Working with Sillicon Valley Companies",
-                "src": "https://i.ibb.co/SdKCNH7/i-Phone-X-XS-11-Pro-45.png"
-            }
-        ]
-    },
-    {
-        "id": 1,
-        "href": "tp-section",
-        "title": "Teleperformance SAS",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-        "direction": "left",
-        "redirectTo": "https://www.teleperformance.com/",
-        "thumbnail": "https://i.ibb.co/Q8nzYW5/Captura-de-Pantalla-2021-11-07-a-la-s-2-19-24-p-m.png",
-        "images_description": ["https://i.ibb.co/bzGXBRg/i-Phone-X-XS-11-Pro-25.png", "https://i.ibb.co/Q8nzYW5/Captura-de-Pantalla-2021-11-07-a-la-s-2-19-24-p-m.png", "https://i.ibb.co/xFCs8VT/i-Phone-X-XS-11-Pro-24.png", "https://i.ibb.co/SsvRHDD/i-Phone-X-XS-11-Pro-26.png"],
-        "images_slider": [
-            {
-                "index": 0,
-                "headline": "Designed UX/UI",
-                "src": "https://i.ibb.co/w4FfZzY/i-Phone-X-XS-11-Pro-47.png "
-            },
-            {
-                "index": 1,
-                "headline": "Focused on coding",
-                "src": "https://i.ibb.co/q9pCd4s/i-Phone-X-XS-11-Pro-49.png"
-            },
-            {
-                "index": 2,
-                "headline": "Won an award",
-                "button": "See in Linkedin",
-                "src": "https://i.ibb.co/TrQT8QC/i-Phone-X-XS-11-Pro-48.png"
-            }
-        ]   
-    },
-    {
-        "id": 2,
-        "href": "dm-section",
-        "title": "Cons. Delgado Murcia",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-        "direction": "right",
-        "redirectTo": "http://consorciodelgadomurcia.com/",
-        "thumbnail": "https://i.ibb.co/MSWtxg8/i-Phone-X-XS-11-Pro-23.png",
-        "images_description": ["https://i.ibb.co/Gd6ShDq/i-Phone-X-XS-11-Pro-31.png", "https://i.ibb.co/MSWtxg8/i-Phone-X-XS-11-Pro-23.png", "https://i.ibb.co/SPjSknC/i-Phone-X-XS-11-Pro-30.png", "https://i.ibb.co/KqDkZCb/i-Phone-X-XS-11-Pro-32.png"],
-        "images_slider": [
-            {
-                "index": 0,
-                "headline": "Used HTML5 CSS JS and PHP",
-                "button": "Shop now",
-                "src": "https://i.ibb.co/1ryzrp1/i-Phone-X-XS-11-Pro-51.png"
-            },
-            {
-                "index": 1,
-                "headline": "A solution from scratch",
-                "button": "Visit web site",
-                "src": "https://i.ibb.co/5LdzM81/i-Phone-X-XS-11-Pro-52.png"
-            }
-        ]    
-    },
-    {
-        "id": 3,
-        "href": "sa-section",
-        "title": "Shop Advisor App",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-        "direction": "left",
-        "redirectTo": "#",
-        "thumbnail": "https://i.ibb.co/cJ2XJSm/Captura-de-Pantalla-2021-11-07-a-la-s-2-21-09-p-m.png",
-        "images_description": ["https://i.ibb.co/RzsgQnW/i-Phone-X-XS-11-Pro-34.png", "https://i.ibb.co/cJ2XJSm/Captura-de-Pantalla-2021-11-07-a-la-s-2-21-09-p-m.png", "https://i.ibb.co/d71QNRH/i-Phone-X-XS-11-Pro-35.png",  "https://i.ibb.co/WzvWJcT/i-Phone-X-XS-11-Pro-33.png"],
-        "images_slider": [
-            {
-                "index": 0,
-                "headline": "Combined search results from Ebay, Amazon and ML",
-                "src": "https://i.ibb.co/wQxdX8D/i-Phone-X-XS-11-Pro-55.png"
-            },
-            {
-                "index": 1,
-                "headline": "To make people's life easier",
-                "src": "https://i.ibb.co/xjbGp9g/i-Phone-X-XS-11-Pro-54.png"
-            },
-            {
-                "index": 2,
-                "headline": "The best way to find your future products",
-                "button": "Visit web site",
-                "src": "https://i.ibb.co/dWrYnvt/i-Phone-X-XS-11-Pro-56.png"
-            }
-        ]    
-    },
-    {
-        "id": 4,
-        "href": "gg-section",
-        "title": "G&G Manufacture",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-        "direction": "right",
-        "redirectTo": "https://g-g-manufacture.web.app/bienvenido",
-        "thumbnail": "https://i.ibb.co/HG2TVz5/i-Phone-X-XS-11-Pro-18.png",
-        "images_description": ["https://i.ibb.co/7RbwTpz/i-Phone-X-XS-11-Pro-38.png", "https://i.ibb.co/HG2TVz5/i-Phone-X-XS-11-Pro-18.png", "https://i.ibb.co/17RZCgW/i-Phone-X-XS-11-Pro-36.png", "https://i.ibb.co/fpXpVGv/i-Phone-X-XS-11-Pro-37.png"],
-        "images_slider": [
-            {
-                "index": 0,
-                "headline": "Calculator for Mechanichals Engineers",
-                "button": "Shop now",
-                "src": "https://i.ibb.co/931zR4K/i-Phone-X-XS-11-Pro-59.png"
-            }
-        ]    
-    },
-    {
-        "id": 5,
-        "href": "pc-section",
-        "title": "Productivity in countries",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
-        "direction": "left",
-        "redirectTo": "https://seminario-spg.firebaseapp.com/index.html#secPregunta",
-        "thumbnail": "https://i.ibb.co/xXNfgz7/Captura-de-Pantalla-2021-11-07-a-la-s-2-43-46-p-m.png",
-        "images_description": ["https://i.ibb.co/5vSVqNV/i-Phone-X-XS-11-Pro-40.png", "https://i.ibb.co/xXNfgz7/Captura-de-Pantalla-2021-11-07-a-la-s-2-43-46-p-m.png", "https://i.ibb.co/TM7SKK0/i-Phone-X-XS-11-Pro-41.png", "https://i.ibb.co/thNpR0k/i-Phone-X-XS-11-Pro-39.png"],
-        "images_slider": [
-            {
-                "index": 0,
-                "headline": "Calculator for Mechanichals Engineers",
-                "button": "Shop now",
-                "src": "https://i.ibb.co/MM65C8s/i-Phone-X-XS-11-Pro-60.png"
-            }
-        ]    
-    }
+  {
+    "id": 0,
+    "href": "as-section",
+    "title": "Austin Software",
+    "description": "React JS || Apollo Context || Contenful || Node JS || Next JS || SCRUM || Sendgrid || JavaScript || MongoDB || Postgress || GraphQL || HTML 5 || CSS 3 || SASS || Chrome Extensions || Web Scrapping || Stripe || Jest || Playwright || RPA\n- Currently, he is working for a new client from the tourist industry, building a Chrome Extension from scratch.\n - Moreover, he worked for an important client from the Healthcare sector, giving support and new requirements in the web platforms the company has.",
+    "direction": "right",
+    "redirectTo": "https://www.austinsoftware.com/",
+    "thumbnail": "https://i.ibb.co/zQq2NRt/i-Phone-X-XS-11-Pro-21.png",
+    "images_description": [
+      "https://i.ibb.co/xsRhR9X/i-Phone-X-XS-11-Pro-28.png",
+      "https://i.ibb.co/zQq2NRt/i-Phone-X-XS-11-Pro-21.png",
+      "https://i.ibb.co/DL4M9NP/i-Phone-X-XS-11-Pro-27.png",
+      "https://i.ibb.co/2tgH1nF/i-Phone-X-XS-11-Pro-29.png"
+    ],
+    "images_slider": [
+      {
+        "index": 0,
+        "headline": "JavaScript Fullstack Developer",
+        "src": "https://i.ibb.co/BK9024v/i-Phone-X-XS-11-Pro-43.png"
+      },
+      {
+        "index": 1,
+        "headline": "Certified in SCRUM",
+        "src": "https://i.ibb.co/V3yQ9vV/i-Phone-X-XS-11-Pro-44.png"
+      },
+      {
+        "index": 2,
+        "headline": "Working with Sillicon Valley Companies",
+        "src": "https://i.ibb.co/SdKCNH7/i-Phone-X-XS-11-Pro-45.png"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "href": "tp-section",
+    "title": "Teleperformance SAS",
+    "description": "- He used Javascript for developing web pages, using the framework React Js for the frontend and Node JS for the backend.\n- He was hired to use RPA (Robot Process Automation) \n- He was also the main designer and frontend developer of the development team.",
+    "direction": "left",
+    "redirectTo": "https://www.teleperformance.com/",
+    "thumbnail": "https://i.ibb.co/Q8nzYW5/Captura-de-Pantalla-2021-11-07-a-la-s-2-19-24-p-m.png",
+    "images_description": [
+      "https://i.ibb.co/bzGXBRg/i-Phone-X-XS-11-Pro-25.png",
+      "https://i.ibb.co/Q8nzYW5/Captura-de-Pantalla-2021-11-07-a-la-s-2-19-24-p-m.png",
+      "https://i.ibb.co/xFCs8VT/i-Phone-X-XS-11-Pro-24.png",
+      "https://i.ibb.co/SsvRHDD/i-Phone-X-XS-11-Pro-26.png"
+    ],
+    "images_slider": [
+      {
+        "index": 0,
+        "headline": "Designed UX/UI",
+        "src": "https://i.ibb.co/w4FfZzY/i-Phone-X-XS-11-Pro-47.png "
+      },
+      {
+        "index": 1,
+        "headline": "Focused on coding",
+        "src": "https://i.ibb.co/q9pCd4s/i-Phone-X-XS-11-Pro-49.png"
+      },
+      {
+        "index": 2,
+        "headline": "Won an award",
+        "src": "https://i.ibb.co/TrQT8QC/i-Phone-X-XS-11-Pro-48.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "href": "dm-section",
+    "title": "Cons. Delgado Murcia",
+    "description": "- Built, developed and implemented a web page responsive and fully informative.\n- Responsible of developing the designing the product (frontend) using muckup tools such as Photoshop and Adobe XD.\n- He used HTML 5 and CSS 3. As well as php for the backend.",
+    "direction": "right",
+    "redirectTo": "http://consorciodelgadomurcia.com/",
+    "thumbnail": "https://i.ibb.co/MSWtxg8/i-Phone-X-XS-11-Pro-23.png",
+    "images_description": [
+      "https://i.ibb.co/Gd6ShDq/i-Phone-X-XS-11-Pro-31.png",
+      "https://i.ibb.co/MSWtxg8/i-Phone-X-XS-11-Pro-23.png",
+      "https://i.ibb.co/SPjSknC/i-Phone-X-XS-11-Pro-30.png",
+      "https://i.ibb.co/KqDkZCb/i-Phone-X-XS-11-Pro-32.png"
+    ],
+    "images_slider": [
+      {
+        "index": 0,
+        "headline": "Used HTML5 CSS JS and PHP",
+        "src": "https://i.ibb.co/1ryzrp1/i-Phone-X-XS-11-Pro-51.png"
+      },
+      {
+        "index": 1,
+        "headline": "A solution from scratch",
+        "src": "https://i.ibb.co/5LdzM81/i-Phone-X-XS-11-Pro-52.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "href": "sa-section",
+    "title": "Shop Advisor App",
+    "description": "Mobile App that performs searches of products in Amazon, Ebay and Mercado Libre in one single app.",
+    "direction": "left",
+    "redirectTo": "#",
+    "thumbnail": "https://i.ibb.co/cJ2XJSm/Captura-de-Pantalla-2021-11-07-a-la-s-2-21-09-p-m.png",
+    "images_description": [
+      "https://i.ibb.co/RzsgQnW/i-Phone-X-XS-11-Pro-34.png",
+      "https://i.ibb.co/cJ2XJSm/Captura-de-Pantalla-2021-11-07-a-la-s-2-21-09-p-m.png",
+      "https://i.ibb.co/d71QNRH/i-Phone-X-XS-11-Pro-35.png",
+      "https://i.ibb.co/WzvWJcT/i-Phone-X-XS-11-Pro-33.png"
+    ],
+    "images_slider": [
+      {
+        "index": 0,
+        "headline": "Combined search results from Ebay, Amazon and ML",
+        "src": "https://i.ibb.co/wQxdX8D/i-Phone-X-XS-11-Pro-55.png"
+      },
+      {
+        "index": 1,
+        "headline": "To make people's life easier",
+        "src": "https://i.ibb.co/xjbGp9g/i-Phone-X-XS-11-Pro-54.png"
+      },
+      {
+        "index": 2,
+        "headline": "The best way to find your future products",
+        "src": "https://i.ibb.co/dWrYnvt/i-Phone-X-XS-11-Pro-56.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "href": "gg-section",
+    "title": "G&G Manufacture",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.",
+    "direction": "right",
+    "redirectTo": "https://g-g-manufacture.web.app/bienvenido",
+    "thumbnail": "https://i.ibb.co/HG2TVz5/i-Phone-X-XS-11-Pro-18.png",
+    "images_description": [
+      "https://i.ibb.co/7RbwTpz/i-Phone-X-XS-11-Pro-38.png",
+      "https://i.ibb.co/HG2TVz5/i-Phone-X-XS-11-Pro-18.png",
+      "https://i.ibb.co/17RZCgW/i-Phone-X-XS-11-Pro-36.png",
+      "https://i.ibb.co/fpXpVGv/i-Phone-X-XS-11-Pro-37.png"
+    ],
+    "images_slider": [
+      {
+        "index": 0,
+        "headline": "Calculator for Mechanichals Engineers",
+        "src": "https://i.ibb.co/931zR4K/i-Phone-X-XS-11-Pro-59.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "href": "pc-section",
+    "title": "Productivity in countries",
+    "description": "- Gave a software solution to a local restaurant, developing a professional product.\n- He was in charge of the design.",
+    "direction": "left",
+    "redirectTo": "https://seminario-spg.firebaseapp.com/index.html#secPregunta",
+    "thumbnail": "https://i.ibb.co/xXNfgz7/Captura-de-Pantalla-2021-11-07-a-la-s-2-43-46-p-m.png",
+    "images_description": [
+      "https://i.ibb.co/5vSVqNV/i-Phone-X-XS-11-Pro-40.png",
+      "https://i.ibb.co/xXNfgz7/Captura-de-Pantalla-2021-11-07-a-la-s-2-43-46-p-m.png",
+      "https://i.ibb.co/TM7SKK0/i-Phone-X-XS-11-Pro-41.png",
+      "https://i.ibb.co/thNpR0k/i-Phone-X-XS-11-Pro-39.png"
+    ],
+    "images_slider": [
+      {
+        "index": 0,
+        "headline": "Calculator for Mechanichals Engineers",
+        "src": "https://i.ibb.co/MM65C8s/i-Phone-X-XS-11-Pro-60.png"
+      }
+    ]
+  }
 ]

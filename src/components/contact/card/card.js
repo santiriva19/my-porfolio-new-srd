@@ -1,6 +1,7 @@
 import { faMousePointer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../../global.css'
 import classes from './card.module.scss';
 
@@ -39,14 +40,14 @@ const CardComponent = () => {
                 </div>
             </div>
             <div className={classes['container_button']}>
-                <div className={classes["button_redirect_white"]}>
+                <Link to="/CV_Santiago_Rivadeneira.pdf" target="_blank" download className={classes["button_redirect_white"]}>
                     <FontAwesomeIcon 
                         icon={faMousePointer}
                         className={classes["icon_button_white"]}
                         size="2x"
                     />
                     <p>Download my CV</p>
-                </div>
+                </Link>
             </div>
         </div>
     )
