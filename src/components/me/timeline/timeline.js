@@ -21,6 +21,76 @@ function TimeLineComponent() {
         className="vertical-timeline-element--work"
         contentStyle={containerStyles}
         contentArrowStyle={{ borderRight: "7px solid rgb(118, 42, 218) " }}
+        date="March 2023"
+        iconStyle={containerStyles}
+        icon={
+          <FontAwesomeIcon
+            icon={faUniversity}
+            size="2x"
+            style={{ paddingRight: "15%" }}
+          />
+        }
+      >
+        <h3 className="vertical-timeline-element-title">
+          Master in Applied Analytics
+        </h3>
+        <h4 className="vertical-timeline-element-subtitle">
+          University of La Sabana
+        </h4>
+        <p>
+          Started a Master to keep learning machine learning and data analysis
+          in order to create an investigation about healthcare.
+        </p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        contentStyle={containerStyles}
+        contentArrowStyle={{ borderRight: "7px solid rgb(118, 42, 218) " }}
+        date="March 2023"
+        iconStyle={containerStyles}
+        icon={
+          <FontAwesomeIcon
+            icon={faUniversity}
+            size="2x"
+            style={{ paddingRight: "15%" }}
+          />
+        }
+      >
+        <h3 className="vertical-timeline-element-title">
+          Ingormatics Engineering graduation
+        </h3>
+        <h4 className="vertical-timeline-element-subtitle">
+          University of La Sabana
+        </h4>
+        <p>Finished university.</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        contentStyle={containerStyles}
+        contentArrowStyle={{ borderRight: "7px solid rgb(118, 42, 218) " }}
+        date="February 2023 - present"
+        iconStyle={containerStyles}
+        icon={
+          <FontAwesomeIcon
+            icon={faReact}
+            size="2x"
+            style={{ paddingRight: "15%" }}
+          />
+        }
+      >
+        <h3 className="vertical-timeline-element-title">
+          Intermediate React Developer
+        </h3>
+        <h4 className="vertical-timeline-element-subtitle">Unosquare</h4>
+        <p>
+          Working from home at Unosquare implementing efficient code and
+          developing React based software.
+        </p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        contentStyle={containerStyles}
+        contentArrowStyle={{ borderRight: "7px solid rgb(118, 42, 218) " }}
         date="December 2021 - present"
         iconStyle={containerStyles}
         icon={
@@ -104,7 +174,7 @@ function TimeLineComponent() {
         className="vertical-timeline-element--work"
         contentStyle={containerStyles}
         contentArrowStyle={{ borderRight: "7px solid rgb(118, 42, 218) " }}
-        date="2018 - present"
+        date="2018"
         iconStyle={containerStyles}
         icon={
           <FontAwesomeIcon
@@ -120,7 +190,7 @@ function TimeLineComponent() {
         <h4 className="vertical-timeline-element-subtitle">
           University of La Sabana
         </h4>
-        <p>Currently cursing the degree.</p>
+        <p>Started informatics engineering degree at University of La Sabana</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"

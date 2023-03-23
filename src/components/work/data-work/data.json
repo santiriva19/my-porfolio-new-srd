@@ -1,9 +1,31 @@
 [
   {
     "id": 0,
+    "href": "uno-section",
+    "title": "Unosquare",
+    "description": "Intermediate React Developer.<br><br>|| React JS || Apollo Context || Contenful || Node JS || Next JS || SCRUM || Sendgrid || JavaScript || MongoDB || Postgress || GraphQL || HTML 5 || CSS 3 || SASS || ",
+    "direction": "left",
+    "redirectTo": "https://www.unosquare.com/",
+    "thumbnail": "https://i.ibb.co/zxFx1dh/Captura-de-Pantalla-2023-03-23-a-la-s-10-06-54-a-m.png",
+    "images_description": [
+      "https://i.ibb.co/xsRhR9X/i-Phone-X-XS-11-Pro-28.png",
+      "https://i.ibb.co/zxFx1dh/Captura-de-Pantalla-2023-03-23-a-la-s-10-06-54-a-m.png",
+      "https://i.ibb.co/pQfKWJH/Captura-de-Pantalla-2023-03-23-a-la-s-10-07-15-a-m.png",
+      "https://i.ibb.co/DL4M9NP/i-Phone-X-XS-11-Pro-27.png"
+    ],
+    "images_slider": [
+      {
+        "index": 0,
+        "headline": "Intermediate React Developer",
+        "src": "https://i.ibb.co/BK9024v/i-Phone-X-XS-11-Pro-43.png"
+      }
+    ]
+  },
+  {
+    "id": 1,
     "href": "as-section",
-    "title": "Austin Software",
-    "description": "React JS || Apollo Context || Contenful || Node JS || Next JS || SCRUM || Sendgrid || JavaScript || MongoDB || Postgress || GraphQL || HTML 5 || CSS 3 || SASS || Chrome Extensions || Web Scrapping || Stripe || Jest || Playwright || RPA<br><br>- Currently, he is working for a new client from the tourist industry, building a Chrome Extension from scratch.<br> - Moreover, he worked for an important client from the Healthcare sector, giving support and new requirements in the web platforms the company has.",
+    "title": "Howdy",
+    "description": "React JS || Apollo Context || Contenful || Node JS || Next JS || SCRUM || Sendgrid || JavaScript || MongoDB || Postgress || GraphQL || HTML 5 || CSS 3 || SASS || Chrome Extensions || Web Scrapping || Stripe || Jest || Playwright || RPA<br><br>- He used to work for a client from the tourist industry, building a Chrome Extension from scratch.<br>- Moreover, he worked for an important client from the Healthcare sector, giving support and new requirements in the web platforms the company has.",
     "direction": "right",
     "redirectTo": "https://www.austinsoftware.com/",
     "thumbnail": "https://i.ibb.co/zQq2NRt/i-Phone-X-XS-11-Pro-21.png",
@@ -32,7 +54,7 @@
     ]
   },
   {
-    "id": 1,
+    "id": 2,
     "href": "tp-section",
     "title": "Teleperformance SAS",
     "description": "React JS || React Redux || JavaScript || HTML 5 || CSS 3 || SASS || Node JS || SRUM || RPA || UI/UX Designer<br><br>- He used Javascript for developing web pages, using the framework React Js for the frontend and Node JS for the backend.<br>- He was hired to use RPA (Robot Process Automation) <br>- He was also the main designer and frontend developer of the development team.",
@@ -64,7 +86,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "href": "dm-section",
     "title": "Cons. Delgado Murcia",
     "description": "UI Designer || JavaScript || HTML 5 || CSS 3 || SASS || PHP || SRUM<br><br>- Built, developed and implemented a web page responsive and fully informative.<br>- Responsible of developing the designing the product (frontend) using muckup tools such as Photoshop and Adobe XD.<br>- He used HTML 5 and CSS 3. As well as php for the backend.",
@@ -91,7 +113,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "href": "sa-section",
     "title": "Shop Advisor App",
     "description": "UI Designer || JavaScript || React Native || AWS SDK || Ebay SDK || Node.js || SRUM <br><br> Mobile App that performs searches of products in Amazon, Ebay and Mercado Libre in one single app.",
@@ -123,7 +145,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "href": "gg-section",
     "title": "G&G Manufacture",
     "description": "React JS || React Redux || JavaScript || HTML 5 || CSS 3 || SASS || Node JS || SRUM || UI/UX Designer <br><br> - Built a calculator for Mechanics Engineers that had to manually workout their solutions to develop metal and plastic assets.",
@@ -145,7 +167,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "href": "pc-section",
     "title": "Productivity in countries",
     "description": " JavaScript || HTML 5 || CSS 3 || SRUM || UI/UX Designer <br><br> - Gave a software solution to a local restaurant, developing a professional product.<br>- He was in charge of the design.",
