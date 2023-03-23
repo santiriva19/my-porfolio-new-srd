@@ -50,7 +50,7 @@ function TimeLineComponent() {
         iconStyle={containerStyles}
         icon={
           <FontAwesomeIcon
-            icon={faUniversity}
+            icon={faGraduationCap}
             size="2x"
             style={{ paddingRight: "15%" }}
           />
