@@ -28,8 +28,8 @@ function IntroducingMS() {
     window.addEventListener("mousemove", parallax);
   }, []);
 
-  const parallax = e => {
-    document.querySelectorAll(".layer").forEach(layer => {
+  const parallax = (e) => {
+    document.querySelectorAll(".layer").forEach((layer) => {
       const speed = layer.getAttribute("data-speed");
       const x = (window.innerHeight - e.pageX * speed) / 100;
       const y = (window.innerHeight - e.pageY * speed) / 100;
@@ -54,8 +54,9 @@ function IntroducingMS() {
       <div data-speed="0.8" className={classes["column_info"] + " layer"}>
         <h1>Santiago Rivadeneira</h1>
         <p className={classes["text_description_title"]}>
-          Fullstack developer at Astro || Informatics Engineer student at
-          Universidad de la Sabana
+          Intermediate React Developer at Unosquare® || Master's student in
+          Applied Analytics at Universidad de la Sabana || Informatics Engineer
+          from Universidad de la Sabana
         </p>
         <br />
         <p className={classes["text_description"]}>Welcome to my portfolio!</p>
@@ -63,7 +64,7 @@ function IntroducingMS() {
           Here you can take a look at my latest works &#128640;
         </p>
         <div className={classes["cont_buttons_social"]}>
-          {buttonsSocial.map(element => {
+          {buttonsSocial.map((element) => {
             return (
               <div
                 className={classes["button_redirect"]}
