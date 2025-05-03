@@ -44,7 +44,6 @@ export default function Header({ setShowHamburguer }) {
     onScroll(); // marca al cargar
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
   const scrollTo = (id) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
