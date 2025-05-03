@@ -17,10 +17,6 @@ const CardComponent = () => {
         '<a style="color: #d59cff" href="https://www.linkedin.com/in/santiago-rivadeneira-delgado-209bbb20b/?locale=en_US">Click here<a/>',
     },
     {
-      name: "Intagram",
-      value: '<p style="margin-left: 0; margin: 0">@lotocode<p/>',
-    },
-    {
       name: "Phone number",
       value: '<p style="margin-left: 0; margin: 0">(+57) 300-3805184<p/>',
     },
@@ -35,8 +31,8 @@ const CardComponent = () => {
       <div style={{ display: "flex", height: "50%" }}>
         <div className={classes["container_img"]}>
           <img
-            src="https://i.ibb.co/cQp6J2n/Imagen-3.png"
-            alt="Img-me"
+            src="https://i.ibb.co/rfn45XZ/Imagen-2.png"
+            alt="Retrato de Santiago Rivadeneira"
             border="0"
           />
         </div>

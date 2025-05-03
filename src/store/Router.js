@@ -26,8 +26,8 @@ function App(props) {
   useEffect(() => {
     window.addEventListener("mousemove", parallax);
   }, []);
-  const parallax = e => {
-    document.querySelectorAll(".layer").forEach(layer => {
+  const parallax = (e) => {
+    document.querySelectorAll(".layer").forEach((layer) => {
       const speed = layer.getAttribute("data-speed");
       const x = (window.innerHeight - e.pageX * speed) / 100;
       const y = (window.innerHeight - e.pageY * speed) / 100;
@@ -89,6 +89,7 @@ function App(props) {
             type="button"
             value="X"
             onClick={() => setShowHamburguer(false)}
+            className={classes["close-ham-menu"]}
           />
           <a id="home" className="menu-item" href="/home">
             Home
@@ -103,23 +104,27 @@ function App(props) {
       )}
 
       <Header setShowHamburguer={setShowHamburguer} />
-      <Routes>
+      {/* <Routes>
         <Route exact path="/" element={<MeComponent />} />
         <Route exact path="/home" element={<MeComponent />} />
         <Route exact path="/my-work" element={<WorkComponent />} />
         <Route exact path="/contact" element={<ContactPage />} />
-      </Routes>
+      </Routes> */}
+
+      <MeComponent />
+      <WorkComponent />
+      <ContactPage />
       <Footer />
     </div>
   );
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     showModalWork: state.showModalWork,
     sliderImages: state.sliderImages,
   };
 };
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onModalShowTrue: () => dispatch({ type: "MODAL_IMAGES_TRUE" }),
     onModalShowFalse: () => dispatch({ type: "MODAL_IMAGES_FALSE" }),

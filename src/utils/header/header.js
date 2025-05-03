@@ -1,69 +1,78 @@
+import React, { useState, useEffect } from "react";
 import classes from "./header.module.scss";
 import Logo from "../../images/logos/logo-white.png";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
-export default function Header({ setShowHamburguer }) {
-  const [showButtonHam, setshowButtonHam] = useState(false);
-  useEffect(() => {
-    function myFunction(x) {
-      if (x.matches) {
-        // If media query matches
-        setshowButtonHam(true);
-      } else {
-        setshowButtonHam(false);
-      }
-    }
 
-    var x = window.matchMedia("(max-width: 745px)");
-    myFunction(x); // Call listener function at run time
-    x.addListener(myFunction); // Attach listener function on state changes
-  });
+export default function Header({ setShowHamburguer }) {
+  const menuItems = [
+    { id: "home", label: "Home" },
+    { id: "my-work", label: "My Work" },
+    { id: "contact", label: "Contact" },
+  ];
+
+  const [showButtonHam, setShowButtonHam] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  // media query para hamburguesa
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 745px)");
+    const onMq = (e) => setShowButtonHam(e.matches);
+    mq.addListener(onMq);
+    onMq(mq);
+    return () => mq.removeListener(onMq);
+  }, []);
+
+  // listener de scroll para detectar sección activa
+  useEffect(() => {
+    const sections = menuItems.map((item) => document.getElementById(item.id));
+
+    const onScroll = () => {
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+      for (let sec of sections) {
+        if (!sec) continue;
+        const top = sec.offsetTop;
+        const bottom = top + sec.offsetHeight;
+        if (scrollPos >= top && scrollPos < bottom) {
+          setActiveSection(sec.id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // marca al cargar
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollTo = (id) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
   return (
-    <div id="my_header" className={classes["container"]}>
-      <div className={classes["img_logo"]}>
+    <div id="my_header" className={classes.container}>
+      <div className={classes.img_logo}>
         <img id="my_logo" src={Logo} alt="logo" />
       </div>
       {showButtonHam ? (
-        <FontAwesomeIcon
-          onClick={() => setShowHamburguer(true)}
-          size="2x"
-          icon={faBars}
-          color="white"
-        />
+        <button className={classes["hm-button"]}>
+          <FontAwesomeIcon
+            onClick={() => setShowHamburguer(true)}
+            size="2x"
+            icon={faBars}
+            color="white"
+          />
+        </button>
       ) : (
         <nav id="my_nav">
-          <p
-            className={
-              window.location.pathname === "/home" ||
-              window.location.pathname === "/"
-                ? classes["active_white"]
-                : ""
-            }
-            onClick={() => (window.location.href = "/home")}
-          >
-            Home
-          </p>
-          <p
-            className={
-              window.location.pathname === "/my-work"
-                ? classes["active_white"]
-                : ""
-            }
-            onClick={() => (window.location.href = "/my-work")}
-          >
-            My Work
-          </p>
-          <p
-            className={
-              window.location.pathname === "/contact"
-                ? classes["active_white"]
-                : ""
-            }
-            onClick={() => (window.location.href = "/contact")}
-          >
-            Contact
-          </p>
+          {menuItems.map(({ id, label }) => (
+            <p
+              key={id}
+              className={activeSection === id ? classes.active_white : ""}
+              onClick={() => scrollTo(id)}
+            >
+              {label}
+            </p>
+          ))}
         </nav>
       )}
     </div>

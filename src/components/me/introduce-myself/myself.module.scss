@@ -60,7 +60,7 @@
     }
     .text_description_title {
       font-weight: 600;
-      color: #686868 !important;
+      color: #b3b3b3 !important;
     }
     p {
       width: 80%;
@@ -68,32 +68,27 @@
       padding: 0px;
       margin-left: 0%;
       font-size: 17px;
-      color: rgb(255, 255, 255) !important;
       font-family: "Nunito";
+      color: white;
+      font-weight: 700;
     }
     .cont_buttons_social {
       @include start_center;
       width: 100%;
-      height: 8%;
       margin-top: 5%;
-      .button_redirect:first-child {
-        margin-left: 0%;
-        border: 3px solid rgb(55, 142, 255);
-      }
-      .button_redirect:last-child {
-        border: 3px solid white;
-      }
+
       .button_redirect {
         @include center_center;
         justify-content: space-evenly;
         flex-direction: row;
-        width: 20%;
+        width: 93%;
         height: 50px;
         margin-left: 5%;
         border: 3px solid;
         border-image-slice: 1;
         border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
         user-select: none;
+        text-decoration: none;
         cursor: pointer;
         .icons_social {
           font-size: 24px;
@@ -126,6 +121,22 @@
     }
   }
 }
+
+.nav_social {
+  width: 500px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    width: 50%;
+  }
+}
+
 @media only screen and (min-width: 300px) and (max-width: 745px) {
   :root {
     --width-img-brush: 40rem;
@@ -144,9 +155,6 @@
   .img_bg_2,
   .img_bg_3 {
     display: none !important;
-  }
-  .button_redirect {
-    width: 25% !important;
   }
 }
 @keyframes scale_in {

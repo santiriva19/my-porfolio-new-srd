@@ -1,0 +1,86 @@
+[
+  {
+    "date": "Aug 2024 - present",
+    "title": "Programming professor",
+    "subtitle": "University of La Sabana",
+    "description": "Professor of: Introduction to Programming, Fundamentals of Information Systems, Data Structures and Algorithms, Human Computer Interaction (HCI)",
+    "icon": "university"
+  },
+  {
+    "date": "March 2023 - present",
+    "title": "Master in Applied Analytics",
+    "subtitle": "University of La Sabana",
+    "description": "Started a Master to keep learning machine learning and data analysis in order to create an investigation about healthcare.",
+    "icon": "university"
+  },
+  {
+    "date": "March 2023",
+    "title": "Informatics Engineering graduation",
+    "subtitle": "University of La Sabana",
+    "description": "Finished university.",
+    "icon": "graduation"
+  },
+  {
+    "date": "February 2023 - present",
+    "title": "Intermediate React Developer",
+    "subtitle": "Unosquare",
+    "description": "Working from home at Unosquare implementing efficient code and developing React-based software.",
+    "icon": "react"
+  },
+  {
+    "date": "December 2021 - present",
+    "title": "Full-Stack Developer",
+    "subtitle": "Austin Software",
+    "description": "Developer with React and Node.js for Silicon-Valley client Truepill.",
+    "icon": "react"
+  },
+  {
+    "date": "Nov 2020 - Dec 2021",
+    "title": "Software Developer",
+    "subtitle": "Teleperformance - Colombia",
+    "description": "Main designer and frontend developer for the team.",
+    "icon": "react"
+  },
+  {
+    "date": "Jun - Nov 2020",
+    "title": "Full-Stack Developer",
+    "subtitle": "Consorcio Delgado Murcia - Colombia",
+    "description": "Built a fully informative, responsive website.",
+    "icon": "css"
+  },
+  {
+    "date": "Jan - Jun 2020",
+    "title": "Frontend Developer",
+    "subtitle": "Terra Engineering - Colombia",
+    "description": "Delivered a professional software solution to a local restaurant.",
+    "icon": "html"
+  },
+  {
+    "date": "2018",
+    "title": "College - Informatics Engineering degree",
+    "subtitle": "University of La Sabana",
+    "description": "Started Informatics Engineering.",
+    "icon": "university"
+  },
+  {
+    "date": "Finished in 2017",
+    "title": "Graduated High-school",
+    "subtitle": "Contraloría General de la República",
+    "description": "Graduated with honors.",
+    "icon": "graduation"
+  },
+  {
+    "date": "2015",
+    "title": "High-school Internship",
+    "subtitle": "Alonzo And Tracy Mourning - Miami, FL",
+    "description": "Attended 9th grade to further develop English skills.",
+    "icon": "flag"
+  },
+  {
+    "date": "2013",
+    "title": "Middle-school Internship",
+    "subtitle": "Norman S. Edelcup K-8 - Miami, FL",
+    "description": "Attended 6th grade in Miami to learn English.",
+    "icon": "flag"
+  }
+]
