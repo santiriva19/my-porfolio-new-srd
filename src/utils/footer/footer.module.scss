@@ -25,6 +25,31 @@
             border: 2px solid white;
             border-radius: 500px;
             cursor: pointer;
+            background-color: transparent;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.1);
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            &:focus-visible {
+                outline: 2px solid #762ada;
+                outline-offset: 4px;
+            }
+
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border-width: 0;
+            }
         }
     }
     .container_rights{

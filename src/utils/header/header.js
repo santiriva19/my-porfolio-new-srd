@@ -1,79 +1,97 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./header.module.scss";
 import Logo from "../../images/logos/logo-white.png";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useScrollEffect } from "../../hooks/useScrollEffect";
 
-export default function Header({ setShowHamburguer }) {
+export default function Header({ setShowHamburguer, isScrolled, logoSize }) {
   const menuItems = [
-    { id: "home", label: "Home" },
-    { id: "my-work", label: "My Work" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: "Home", ariaLabel: "Navigate to Home section" },
+    { id: "my-work", label: "My Work", ariaLabel: "Navigate to My Work section" },
+    { id: "contact", label: "Contact", ariaLabel: "Navigate to Contact section" },
   ];
 
-  const [showButtonHam, setShowButtonHam] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 745px)");
   const [activeSection, setActiveSection] = useState("home");
 
-  // media query para hamburguesa
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 745px)");
-    const onMq = (e) => setShowButtonHam(e.matches);
-    mq.addListener(onMq);
-    onMq(mq);
-    return () => mq.removeListener(onMq);
-  }, []);
-
-  // listener de scroll para detectar sección activa
-  useEffect(() => {
+  useScrollEffect(() => {
     const sections = menuItems.map((item) => document.getElementById(item.id));
-
-    const onScroll = () => {
-      const scrollPos = window.scrollY + window.innerHeight / 2;
-      for (let sec of sections) {
-        if (!sec) continue;
-        const top = sec.offsetTop;
-        const bottom = top + sec.offsetHeight;
-        if (scrollPos >= top && scrollPos < bottom) {
-          setActiveSection(sec.id);
-          break;
-        }
+    const scrollPos = window.scrollY + window.innerHeight / 2;
+    
+    for (let sec of sections) {
+      if (!sec) continue;
+      const top = sec.offsetTop;
+      const bottom = top + sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < bottom) {
+        setActiveSection(sec.id);
+        break;
       }
-    };
-
-    window.addEventListener("scroll", onScroll);
-    onScroll(); // marca al cargar
-    return () => window.removeEventListener("scroll", onScroll);
+    }
   }, []);
-  const scrollTo = (id) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleKeyPress = (e, id) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      scrollTo(id);
+    }
+  };
 
   return (
-    <div id="my_header" className={classes.container}>
+    <header 
+      className={`${classes.container} ${isScrolled ? classes.scrolled : ''}`}
+      role="banner"
+    >
       <div className={classes.img_logo}>
-        <img id="my_logo" src={Logo} alt="logo" />
+        <img 
+          src={Logo} 
+          alt="Santiago Rivadeneira logo"
+          className={`${classes.logo} ${logoSize === 'small' ? classes.logoSmall : ''}`}
+          width="80"
+          height="80"
+        />
       </div>
-      {showButtonHam ? (
-        <button className={classes["hm-button"]}>
+      {isMobile ? (
+        <button 
+          className={classes["hm-button"]}
+          onClick={() => setShowHamburguer(true)}
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
           <FontAwesomeIcon
-            onClick={() => setShowHamburguer(true)}
             size="2x"
             icon={faBars}
             color="white"
+            aria-hidden="true"
           />
         </button>
       ) : (
-        <nav id="my_nav">
-          {menuItems.map(({ id, label }) => (
-            <p
-              key={id}
-              className={activeSection === id ? classes.active_white : ""}
-              onClick={() => scrollTo(id)}
-            >
-              {label}
-            </p>
-          ))}
+        <nav aria-label="Main navigation">
+          <ul className={classes.navList}>
+            {menuItems.map(({ id, label, ariaLabel }) => (
+              <li key={id}>
+                <button
+                  className={`${classes.navButton} ${activeSection === id ? classes.active_white : ""}`}
+                  onClick={() => scrollTo(id)}
+                  onKeyPress={(e) => handleKeyPress(e, id)}
+                  aria-label={ariaLabel}
+                  aria-current={activeSection === id ? "page" : undefined}
+                >
+                  {label}
+                </button>
+              </li>
+            ))}
+          </ul>
         </nav>
       )}
-    </div>
+    </header>
   );
 }

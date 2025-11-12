@@ -12,7 +12,7 @@ import {
   faFlagUsa,
 } from "@fortawesome/free-solid-svg-icons";
 
-import timelineData from "./timeline.json"; // ⬅️ el JSON
+import timelineData from "./timeline.json";
 
 const iconMap = {
   react: faReact,
@@ -28,30 +28,36 @@ const arrowStyles = { borderRight: "7px solid rgb(118, 42, 218)" };
 
 export default function TimeLineComponent() {
   return (
-    <VerticalTimeline>
-      {timelineData.map((item, idx) => (
-        <VerticalTimelineElement
-          key={idx}
-          className="vertical-timeline-element--work"
-          contentStyle={containerStyles}
-          contentArrowStyle={arrowStyles}
-          date={item.date}
-          iconStyle={containerStyles}
-          icon={
-            <FontAwesomeIcon
-              icon={iconMap[item.icon]}
-              size="2x"
-              style={{ paddingRight: item.icon === "css" ? "12%" : "15%" }}
-            />
-          }
-        >
-          <h3 className="vertical-timeline-element-title">{item.title}</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            {item.subtitle}
-          </h4>
-          <p>{item.description}</p>
-        </VerticalTimelineElement>
-      ))}
-    </VerticalTimeline>
+    <section aria-labelledby="timeline-title">
+      <h2 id="timeline-title" className="sr-only">
+        Professional Timeline
+      </h2>
+      <VerticalTimeline>
+        {timelineData.map((item, idx) => (
+          <VerticalTimelineElement
+            key={idx}
+            className="vertical-timeline-element--work"
+            contentStyle={containerStyles}
+            contentArrowStyle={arrowStyles}
+            date={item.date}
+            iconStyle={containerStyles}
+            icon={
+              <FontAwesomeIcon
+                icon={iconMap[item.icon]}
+                size="2x"
+                style={{ paddingRight: item.icon === "css" ? "12%" : "15%" }}
+                aria-hidden="true"
+              />
+            }
+          >
+            <h3 className="vertical-timeline-element-title">{item.title}</h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              {item.subtitle}
+            </h4>
+            <p>{item.description}</p>
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
+    </section>
   );
 }

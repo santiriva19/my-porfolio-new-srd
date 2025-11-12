@@ -1,0 +1,278 @@
+@import 'variables';
+@import 'mixins';
+
+// ============================================
+// Global Styles - Mobile First
+// ============================================
+
+html {
+  @include smooth-scroll;
+}
+
+body {
+  background-color: $color-black;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-base;
+  line-height: $line-height-normal;
+  color: $color-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// ============================================
+// Accessibility
+// ============================================
+
+.sr-only {
+  @include sr-only;
+}
+
+// ============================================
+// Scroll Containers
+// ============================================
+
+.scroll-container {
+  // Mobile
+  min-height: 100vh;
+  min-height: 100dvh; // Dynamic viewport height for mobile browsers
+  padding: $spacing-xl $spacing-md;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  // Tablet and up
+  @include md {
+    padding: $spacing-xxl $spacing-xl;
+  }
+
+  // Desktop
+  @include lg {
+    min-height: 100vh;
+    padding: $spacing-xxxl $spacing-xl;
+  }
+}
+
+// ============================================
+// Scroll Animations
+// ============================================
+
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.fade-in-right {
+  animation: slide_right 0.8s ease;
+}
+
+.scrolled.fade-in-left {
+  animation: slide_left 0.8s ease;
+}
+
+.scroll-element {
+  height: 100%;
+}
+
+.scroll-element,
+.scroll-caption {
+  width: 100%;
+}
+
+// ============================================
+// Mobile Menu Styles
+// ============================================
+
+.bm-menu-wrap {
+  z-index: $z-mobile-menu !important;
+  right: 0 !important;
+  background-color: $color-black;
+  // Mobile: full width
+  width: 100% !important;
+  padding-top: 20%;
+
+  // Small screens: 85%
+  @include xs {
+    width: 85% !important;
+    padding-top: 18%;
+  }
+
+  // Medium screens: 70%
+  @include sm {
+    width: 70% !important;
+    padding-top: 15%;
+  }
+
+  // Tablet: 50%
+  @include md {
+    width: 50% !important;
+    padding-top: 12%;
+  }
+
+  div nav button.menu-item {
+    font-family: $font-family-base;
+    margin-left: 10% !important;
+    margin-top: 6% !important;
+    // Mobile
+    font-size: $font-size-2xl;
+    color: $color-white;
+    transition: all $transition-slow;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: $spacing-md;
+    width: 100%;
+    display: block;
+    min-height: 44px;
+
+    // Tablet and up
+    @include md {
+      margin-left: 15% !important;
+      margin-top: 7% !important;
+      font-size: $font-size-4xl;
+      padding: $spacing-lg;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateX(10px);
+      color: $color-primary-light;
+    }
+  }
+
+  input {
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    border: none;
+    background: transparent;
+    // Mobile
+    font-size: $font-size-4xl;
+    cursor: pointer;
+    transition: all $transition-slow;
+    min-width: 44px;
+    min-height: 44px;
+
+    // Desktop
+    @include md {
+      font-size: $font-size-5xl;
+    }
+  }
+
+  input:hover,
+  div nav button.menu-item:hover {
+    transform: scale(1.1);
+  }
+
+  div nav button.menu-item:focus-visible,
+  input:focus-visible {
+    outline: 3px solid $color-primary;
+    outline-offset: 4px;
+  }
+}
+
+// ============================================
+// Animations
+// ============================================
+
+@keyframes slide_right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes scale_header_in {
+  0% {
+    background-color: transparent;
+    height: 100px;
+    border: 1px solid $color-white;
+  }
+  100% {
+    background-color: $color-gray-dark;
+    height: 60px;
+    border: none;
+  }
+}
+
+@keyframes scale_header_out {
+  0% {
+    background-color: $color-gray-dark;
+    height: 60px;
+    border: none;
+  }
+  100% {
+    background-color: transparent;
+    height: 100px;
+    border: 1px solid $color-white;
+  }
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade_out {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+// ============================================
+// Reduced Motion Support
+// ============================================
+
+@include reduced-motion;
+
+// ============================================
+// Print Styles
+// ============================================
+
+@media print {
+  .bm-menu-wrap,
+  .hm-button {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
+

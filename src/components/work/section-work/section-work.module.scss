@@ -27,20 +27,26 @@
     height: 100vh;
     margin-left: 5%;
     padding-right: 2%;
-    h1 {
+    h2 {
       width: 100%;
       font-family: "Permanent Marker";
       font-size: var(--font-size-title);
+      margin: 0 0 1rem 0;
     }
-    p {
+    
+    .description_text {
       width: 100%;
-      margin: 0px;
-      padding: 0px;
-      margin-left: 0%;
-      font-size: 17px;
-      color: rgb(255, 255, 255);
-      font-family: "Nunito";
-      font-weight: 600;
+      
+      p {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        margin-left: 0%;
+        font-size: 17px;
+        color: rgb(255, 255, 255);
+        font-family: "Nunito";
+        font-weight: 600;
+      }
     }
     .row_odd {
       @include start_center;
@@ -66,42 +72,58 @@
         user-select: none;
         cursor: pointer;
         margin-top: 3%;
-        transition: background-color 0.5s;
-        p {
+        transition: background-color 0.5s, transform 0.5s;
+        
+        span {
           width: auto;
           margin: 0px;
           padding: 0px;
           font-weight: 800;
           color: white;
           transition: color 0.5s;
+          font-family: "Nunito";
         }
+        
         .icon_button_black {
           color: white;
           transition: color 0.5s;
         }
       }
-      .button_redirect_black:hover {
+      
+      .button_redirect_black:hover,
+      .button_redirect_black:focus {
         animation: scale_in 0.5s ease;
         background-color: white;
         transform: translateY(-6px);
-        p {
+        outline: none;
+        
+        span {
           color: black;
-          font-family: "Nunito";
         }
+        
         .icon_button_black {
           color: black;
         }
       }
-      .button_redirect_black:not(:hover) {
+
+      .button_redirect_black:focus-visible {
+        outline: 3px solid #762ada;
+        outline-offset: 4px;
+      }
+      
+      .button_redirect_black:not(:hover):not(:focus) {
         animation: scale_out 0.5s ease;
         transform: translateY(0px);
-        p {
+        
+        span {
           color: white;
         }
+        
         .icon_button_black {
           color: white;
         }
       }
+      
       .button_redirect_black:last-child {
         margin-left: 2%;
       }
@@ -117,41 +139,58 @@
         user-select: none;
         cursor: pointer;
         margin-top: 3%;
-        transition: background-color 0.5s;
+        transition: background-color 0.5s, transform 0.5s;
+        
         .icons_social {
           font-size: 24px;
           color: black;
         }
-        p {
+        
+        span {
           width: auto;
           margin: 0px;
           padding: 0px;
           font-weight: 800;
           color: black;
           transition: color 0.5s;
+          font-family: "Nunito";
         }
+        
         .icon_button_white {
           color: rgb(0, 0, 0);
           transition: color 0.5s;
         }
       }
-      .button_redirect_white:hover {
+      
+      .button_redirect_white:hover,
+      .button_redirect_white:focus {
         animation: scale_in 0.5s ease;
         background-color: rgb(0, 0, 0);
         transform: translateY(-6px);
-        p {
+        outline: none;
+        
+        span {
           color: rgb(255, 255, 255);
         }
+        
         .icon_button_white {
           color: white;
         }
       }
-      .button_redirect_white:not(:hover) {
+
+      .button_redirect_white:focus-visible {
+        outline: 3px solid #762ada;
+        outline-offset: 4px;
+      }
+      
+      .button_redirect_white:not(:hover):not(:focus) {
         animation: scale_out 0.5s ease;
         transform: translateY(0px);
-        p {
+        
+        span {
           color: black;
         }
+        
         .icon_button_white {
           color: black;
         }

@@ -1,20 +1,20 @@
 [
   {
-    "date": "Aug 2024 - present",
+    "date": "2024 - 2025",
     "title": "Programming professor",
     "subtitle": "University of La Sabana",
     "description": "Professor of: Introduction to Programming, Fundamentals of Information Systems, Data Structures and Algorithms, Human Computer Interaction (HCI)",
     "icon": "university"
   },
   {
-    "date": "March 2023 - present",
+    "date": "2023 - 2025",
     "title": "Master in Applied Analytics",
     "subtitle": "University of La Sabana",
     "description": "Started a Master to keep learning machine learning and data analysis in order to create an investigation about healthcare.",
     "icon": "university"
   },
   {
-    "date": "March 2023",
+    "date": "2018 - 2023",
     "title": "Informatics Engineering graduation",
     "subtitle": "University of La Sabana",
     "description": "Finished university.",
@@ -28,7 +28,7 @@
     "icon": "react"
   },
   {
-    "date": "December 2021 - present",
+    "date": "2021 - 2023",
     "title": "Full-Stack Developer",
     "subtitle": "Austin Software",
     "description": "Developer with React and Node.js for Silicon-Valley client Truepill.",
@@ -68,19 +68,5 @@
     "subtitle": "Contraloría General de la República",
     "description": "Graduated with honors.",
     "icon": "graduation"
-  },
-  {
-    "date": "2015",
-    "title": "High-school Internship",
-    "subtitle": "Alonzo And Tracy Mourning - Miami, FL",
-    "description": "Attended 9th grade to further develop English skills.",
-    "icon": "flag"
-  },
-  {
-    "date": "2013",
-    "title": "Middle-school Internship",
-    "subtitle": "Norman S. Edelcup K-8 - Miami, FL",
-    "description": "Attended 6th grade in Miami to learn English.",
-    "icon": "flag"
   }
 ]

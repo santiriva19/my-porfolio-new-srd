@@ -18,14 +18,36 @@
     right: 5%;
     border-radius: 200px;
     cursor: pointer;
-  }
-  .bubble_back_up:hover {
-    animation: scale_up 0.5s ease;
-    transform: scale(1.1);
-  }
-  .bubble_back_up:not(:hover) {
-    animation: scale_down 0.5s ease;
-    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.8);
+    }
+
+    &.visible {
+      opacity: 1;
+      pointer-events: all;
+      transform: scale(1);
+    }
+
+    &:hover,
+    &:focus {
+      animation: scale_up 0.5s ease;
+      transform: scale(1.1);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #762ada;
+      outline-offset: 4px;
+    }
+
+    &:not(:hover):not(:focus) {
+      animation: scale_down 0.5s ease;
+      transform: scale(1);
+    }
   }
 }
 @keyframes scale_up {

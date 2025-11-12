@@ -48,7 +48,8 @@
                 border: 3px solid white;
                 margin: 1%;
                 cursor: pointer;
-                transition: background-color 0.5s ease;
+                transition: background-color 0.5s ease, transform 0.5s ease;
+                
                 .card_img{
                     @include center_center;
                     width: 100%;
@@ -56,6 +57,7 @@
                     border-bottom: 3px solid white;
                     transition: border-bottom 0.5s ease;
                     overflow: hidden;
+                    
                     img{
                         opacity: 0.4;
                         width: 100%;
@@ -63,35 +65,52 @@
                         transition: opacity 0.5s ease;
                     }
                 }
+                
                 .card_title{
                     @include center_center;
                     color: white;
                     transition: color 0.5s ease;
                     width: 100%;
                     height: 40%;
+                    
+                    .icon_circle {
+                        font-size: 10px;
+                        padding-right: 2%;
+                    }
+                    
                     h3{
                         font-family: "Nunito";
                         font-weight: 900;
+                        margin: 0;
                     }
                 }
             }
-            .card:hover{
+            
+            .card:hover,
+            .card:focus {
                 animation: scale_in 0.5s ease;
                 background-color: white;
                 transform: translateY(-6px);
+                outline: none;
+                
                 .card_title{
                     color: black;
                 }
                 .card_img{
                     border-bottom: 3px solid black;
-                }
-                .card_img{
+                    
                     img{
                         opacity: 1;
                     }
                 }
             }
-            .card:not(:hover){
+
+            .card:focus-visible {
+                outline: 3px solid #762ada;
+                outline-offset: 4px;
+            }
+            
+            .card:not(:hover):not(:focus){
                 animation: scale_out 0.5s ease;
                 transform: translateY(0px);
             }

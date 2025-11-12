@@ -30,14 +30,25 @@
         color: white;
         transform: scale(1);
         transition: all 0.5s ease;
-        &:hover {
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: bold;
+        
+        &:hover,
+        &:focus {
           border: 3px solid black;
           background-color: white;
           transform: scale(1.1);
           color: black;
         }
+
+        &:focus-visible {
+          outline: 3px solid #762ada;
+          outline-offset: 4px;
+        }
       }
-      label {
+      
+      .esc_label {
         color: white;
         font-family: "Nunito";
         font-size: 13px;
@@ -48,6 +59,21 @@
 
 .close-ham-menu {
   color: white;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #762ada;
+    outline-offset: 4px;
+  }
 }
 
 .bg_1,
