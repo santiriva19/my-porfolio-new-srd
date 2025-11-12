@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedinIn,
   faInstagram,
-  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const buttonsSocial = [
   {
@@ -14,20 +14,15 @@ const buttonsSocial = [
     link: "https://www.linkedin.com/in/santiago-rivadeneira-delgado-209bbb20b/",
     icon: faLinkedinIn,
     color: "rgb(55, 142, 255)",
+    isExternal: true,
   },
-  // {
-  //   id: 1,
-  //   name: "Instagram",
-  //   link: "https://www.instagram.com/lotocode/?hl=es",
-  //   icon: faInstagram,
-  //   color: "#ff33b4",
-  // },
   {
     id: 2,
-    name: "GitHub",
-    link: "https://github.com/santiriva19",
-    icon: faGithub,
+    name: "Download CV",
+    link: "/CV_Santiago_Rivadeneira.pdf",
+    icon: faDownload,
     color: "white",
+    isDownload: true,
   },
 ];
 
@@ -100,20 +95,21 @@ function IntroducingMS() {
           Here you can take a look at my latest projects 🚀
         </p>
 
-        {/* Botones sociales */}
-        <nav className={classes["nav_social"]} aria-label="Social profiles">
+        {/* Botones sociales y CV */}
+        <nav className={classes["nav_social"]} aria-label="Social profiles and CV">
           <ul className={classes["cont_buttons_social"]}>
-            {buttonsSocial.map(({ id, name, link, icon, color }) => (
+            {buttonsSocial.map(({ id, name, link, icon, color, isDownload, isExternal }) => (
               <li key={id}>
                 <a
                   href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  download={isDownload ? "CV_Santiago_Rivadeneira.pdf" : undefined}
                   className={classes["button_redirect"]}
                   style={{
                     border: `3px solid ${color}`,
                   }}
-                  aria-label={`Open ${name} profile in new tab`}
+                  aria-label={isDownload ? `Download ${name}` : `Open ${name} profile in new tab`}
                 >
                   <FontAwesomeIcon
                     icon={icon}
@@ -121,7 +117,6 @@ function IntroducingMS() {
                     className={classes["icons_social"]}
                     aria-hidden="true"
                   />
-                  {/* Texto sólo para lectores de pantalla */}
                   <p style={{ color: `${color}` }}>{name}</p>
                 </a>
               </li>

@@ -1,5 +1,4 @@
 import {
-  faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,12 +11,6 @@ export default function Footer() {
       url: "https://www.linkedin.com/in/santiago-rivadeneira-delgado-209bbb20b/",
       icon: faLinkedin,
       label: "Visit Santiago Rivadeneira's LinkedIn profile"
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/santiriva19",
-      icon: faGithub,
-      label: "Visit Santiago Rivadeneira's GitHub profile"
     }
   ];
 
