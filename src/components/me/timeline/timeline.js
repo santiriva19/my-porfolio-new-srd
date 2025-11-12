@@ -23,12 +23,12 @@ const iconMap = {
   flag: faFlagUsa,
 };
 
-const containerStyles = { background: "black", color: "#fff" };
+const containerStyles = { background: "transparent", color: "white" };
 const arrowStyles = { borderRight: "7px solid rgb(118, 42, 218)" };
 
 export default function TimeLineComponent() {
   return (
-    <section aria-labelledby="timeline-title">
+    <section aria-labelledby="timeline-title" style={{ width: "100%" }}>
       <h2 id="timeline-title" className="sr-only">
         Professional Timeline
       </h2>
@@ -40,12 +40,12 @@ export default function TimeLineComponent() {
             contentStyle={containerStyles}
             contentArrowStyle={arrowStyles}
             date={item.date}
-            iconStyle={containerStyles}
+            iconStyle={{ background: "black", color: "#fff" }}
             icon={
               <FontAwesomeIcon
                 icon={iconMap[item.icon]}
                 size="2x"
-                style={{ paddingRight: item.icon === "css" ? "12%" : "15%" }}
+                style={{ paddingRight: item.icon === "css" ? "10%" : "15%" }}
                 aria-hidden="true"
               />
             }
